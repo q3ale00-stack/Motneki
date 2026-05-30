@@ -1,0 +1,334 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#261812",
+                        "on-secondary-container": "#636262",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#f8ddd2",
+                        "primary": "#a33e00",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#ff6600",
+                        "outline-variant": "#e3bfb1",
+                        "surface-tint": "#a33e00",
+                        "inverse-surface": "#3d2d26",
+                        "surface-container-low": "#fff1ec",
+                        "outline": "#8e7164",
+                        "surface": "#fff8f6",
+                        "secondary": "#5f5e5e",
+                        "background": "#fff8f6",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "on-primary-fixed": "#360f00",
+                        "tertiary-container": "#009cfc",
+                        "on-primary-container": "#561d00",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container-high": "#fee2d8",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-dim": "#f0d4ca",
+                        "primary-fixed-dim": "#ffb596",
+                        "on-tertiary-fixed": "#001d35",
+                        "primary-fixed": "#ffdbcd",
+                        "on-tertiary-container": "#003155",
+                        "inverse-on-surface": "#ffede7",
+                        "surface-container": "#ffe9e1",
+                        "on-surface": "#261812",
+                        "tertiary": "#0062a1",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#f8ddd2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "xl": "40px",
+                        "gutter": "12px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "price": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "h1": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h2": ["20px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "label-bold": ["11px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "price": ["18px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scale-98-on-click:active {
+            transform: scale(0.98);
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-background min-h-screen" data-mode="connect">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-6 py-3 sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-orange-600 tracking-tighter font-h1">MotnekiStore</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-neutral-600 hover:text-orange-600 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all duration-200" href="#">Novedades</a>
+<a class="text-neutral-600 hover:text-orange-600 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all duration-200" href="#">Preventas</a>
+<a class="text-neutral-600 hover:text-orange-600 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all duration-200" href="#">Exclusivos</a>
+<a class="text-neutral-600 hover:text-orange-600 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all duration-200" href="#">Figuras a Escala</a>
+<a class="text-neutral-600 hover:text-orange-600 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all duration-200" href="#">Nendoroids</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-neutral-50 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="p-2 hover:bg-neutral-50 rounded-full transition-colors relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-primary-container text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">2</span>
+</button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 py-10">
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Main Cart Content -->
+<div class="flex-1">
+<div class="flex items-center justify-between mb-8">
+<h1 class="font-h1 text-display text-on-background">Tu Carrito (2 artículos)</h1>
+<button class="text-body-sm text-secondary hover:text-primary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span> Mover a Lista de Deseos</button>
+</div>
+<!-- Cart Table Header -->
+<div class="hidden md:grid grid-cols-12 gap-gutter pb-4 border-b border-outline-variant text-label-bold text-on-secondary-container">
+<div class="col-span-6 uppercase tracking-widest">Detalles del Producto</div>
+<div class="col-span-2 text-center uppercase tracking-widest">Cantidad</div>
+<div class="col-span-2 text-right uppercase tracking-widest">Precio Unitario</div>
+<div class="col-span-2 text-right uppercase tracking-widest">Subtotal</div>
+</div>
+<!-- Cart Items List -->
+<div class="divide-y divide-outline-variant">
+<!-- Item 1 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter py-8 items-center group">
+<div class="col-span-1 md:col-span-6 flex gap-4">
+<div class="w-32 h-32 bg-white border border-outline-variant rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-contain" data-alt="Detailed studio photography of a high-end scale anime figure showcasing intricate metallic paint details and dynamic posing. The lighting is soft and professional against a pristine white background, emphasizing the premium quality and vibrant orange accents of the character's costume. The visual style is clean, sharp, and reflects the authoritative collector aesthetic of Moneki Store." src="https://i.ebayimg.com/images/g/5oAAAeSwWxpqCE1h/s-l1600.webp">
+</div>
+<div class="flex flex-col justify-between py-1">
+<div class="">
+<span class="text-label-bold text-secondary uppercase tracking-tighter">ALTER MANUFACTURING</span>
+<h3 class="font-h2 text-h2 text-on-background line-clamp-2 mt-1"><span style="color: rgb(25, 25, 25); font-family: &quot;Market Sans&quot;, Arial, sans-serif; font-size: 22px; background-color: rgb(255, 255, 255);" class="">Bandai Figuarts Zero One Piece Kaido of the Beasts</span></h3>
+<div class="flex gap-2 mt-2">
+<span class="bg-tertiary-container/10 text-tertiary text-[10px] px-2 py-0.5 font-bold rounded-sm border border-tertiary-container/20">PREVENTA</span>
+<span class="bg-surface-container-highest text-primary text-[10px] px-2 py-0.5 font-bold rounded-sm border border-outline-variant">EXCLUSIVO</span>
+</div>
+</div>
+<div class="flex gap-4 mt-4">
+<button class="text-body-sm text-secondary hover:text-primary flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span> Mover a Lista de Deseos</button>
+<button class="text-body-sm text-error hover:text-red-700 flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-sm" data-icon="close">close</span> Eliminar</button>
+</div>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2 flex justify-center mt-4 md:mt-0">
+<div class="flex items-center border border-outline-variant rounded bg-white">
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="w-10 text-center font-bold text-body-md">1</span>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2 text-right mt-2 md:mt-0">
+<p class="text-on-secondary-container md:hidden">Precio Unit.:</p>
+<p class="font-price text-body-lg text-on-background">S/. 620.00</p>
+</div>
+<div class="col-span-1 md:col-span-2 text-right mt-2 md:mt-0">
+<p class="text-on-secondary-container md:hidden font-bold">Subtotal:</p>
+<p class="font-price text-price text-primary">S/. 620.00</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter py-8 items-center group">
+<div class="col-span-1 md:col-span-6 flex gap-4">
+<div class="w-32 h-32 bg-white border border-outline-variant rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-contain" data-alt="A premium close-up of a collectible Nendoroid figure with multiple swappable face plates and accessories displayed on a clean white desk. The lighting is bright and cheerful, highlighting the cute aesthetic and precise paintwork. The background is a soft-focus Akihabara-inspired shelf, maintaining a sense of organized retail density and enthusiasm for the hobby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByonMZHGHiPCJYsjM9N2q-iAuR9DJCdZmBq-R3rZFFEkysOT9wca8cqH032nqPWD9rUSZvn5clPkEAE3pLSWHQI4oKDqnC62QpgfhCBoTNYmWSivRmtb7klEdZ0OyPKUEXwyIAG31UKQ_558xyOnWXAKNwR1RIL3g2uj9yF6YB0LY0md7ReLOr3lNFobFxxAj-c1CDOJrTPcwle2uKQnRxXVK43KbekoDoDs2M_NiVnRhIi-iJObmFC3sEfCKi1Q9ldacfReQSAF6X">
+</div>
+<div class="flex flex-col justify-between py-1">
+<div class="">
+<span class="text-label-bold text-secondary uppercase tracking-tighter">GOOD SMILE COMPANY</span>
+<h3 class="font-h2 text-h2 text-on-background line-clamp-2 mt-1">Nendoroid Denji: Chainsaw Man Edition</h3>
+<div class="flex gap-2 mt-2">
+<span class="bg-primary-container/10 text-primary text-[10px] px-2 py-0.5 font-bold rounded-sm border border-primary-container/20">LISTO PARA ENVIAR</span>
+</div>
+</div>
+<div class="flex gap-4 mt-4">
+<button class="text-body-sm text-secondary hover:text-primary flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span> Mover a Lista de Deseos</button>
+<button class="text-body-sm text-error hover:text-red-700 flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-sm" data-icon="close">close</span> Eliminar</button>
+</div>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2 flex justify-center mt-4 md:mt-0">
+<div class="flex items-center border border-outline-variant rounded bg-white">
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="w-10 text-center font-bold text-body-md">2</span>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2 text-right mt-2 md:mt-0">
+<p class="text-on-secondary-container md:hidden">Precio Unit.:</p>
+<p class="font-price text-body-lg text-on-background">S/. 59.99</p>
+</div>
+<div class="col-span-1 md:col-span-2 text-right mt-2 md:mt-0">
+<p class="text-on-secondary-container md:hidden font-bold">Subtotal:</p>
+<p class="font-price text-price text-primary">S/. 119.98</p>
+</div>
+</div>
+</div>
+<!-- Saved for Later Section -->
+<div class="mt-20">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-h1 text-h1 text-on-background">Guardado para más tarde</h2>
+<a class="text-primary font-label-bold uppercase tracking-widest hover:underline transition-all" href="#">Ver Lista de Deseos</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="bg-white border border-outline-variant p-3 group">
+<div class="relative aspect-square mb-3 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A stylized photo of a high-quality articulated action figure in an action pose, set against a vibrant but clean orange-gradient background. The figure is sharply focused, emphasizing the articulated joints and fine textural details. The lighting creates a sense of drama and excitement, fitting the 'discovery within order' retail atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsb01KeX4jvzKlXvSJjbsSmdnon2RRxD1oGJCCAfiYVCZSKf0yXZ_tkYwumKU-UFXVZV6ZkISj17Z_J2JFWxnQNHl_5aYj8XBMNXrGxdpwXJYQB2hkU0tc_XIa4IqyxfXvtDVEOin8WEqd5EJvQJBvwEnJwBwTCUEKf2sgNAGfopsRJI53ifN3XeeTGRbtI5-jejjVJlZzp9NlTXtf9jYpffLAJ0PwHNZosWLCzpgX6xkquybQs1hNZDi5ifvI3LijXSOhs3vtMyL0">
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 backdrop-blur-sm rounded-full shadow-sm hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+<p class="text-body-sm text-secondary uppercase tracking-tighter">MAX FACTORY</p>
+<h4 class="font-label-bold text-on-background line-clamp-1 mt-1">Figma #500: Lio Fotia</h4>
+<p class="font-price text-body-md text-primary mt-1">S/. 85.00</p>
+</div>
+<div class="bg-white border border-outline-variant p-3 group">
+<div class="relative aspect-square mb-3 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean, professionally lit product shot of a collector's display case containing rare anime merchandise. The aesthetic is minimal and high-end, utilizing a pristine white environment with subtle orange light accents that match the Moneki Store brand. The focus is on the order and enthusiast-grade presentation of the items." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDessHmJKxN3dNynya4843kLMu0y_CpLfe2CrZgLG-I6dHC-yRFa-hKl6K_wb-YXPwPDN1Nki4ROLTVGpps5xeQZebvYjlwVJ9fLHBhaBmAYhTnl2iVnaXk0nkCpEQ1ZALZffZVEYOX6-FcoH3IH9mX5oMw55JU99jPX1OjjufcP9kh3YkusB1AvwQVrP-dKPmI1C4oedI1vgwEO4PnYDjQBhXSBXwnPWh91uoNz2q875Rdwe3UbR4XS15oarhTVQ1ZjGUB4mWuosWY">
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 backdrop-blur-sm rounded-full shadow-sm hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+<p class="text-body-sm text-secondary uppercase tracking-tighter">KOTOBUKIYA</p>
+<h4 class="font-label-bold text-on-background line-clamp-1 mt-1">Dark Magician Girl 1/7</h4>
+<p class="font-price text-body-md text-primary mt-1">S/. 159.00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Summary -->
+<aside class="w-full lg:w-[380px]">
+<div class="bg-white border border-outline-variant p-6 sticky top-24">
+<h2 class="font-h2 text-h2 text-on-background mb-6">Resumen del Pedido</h2>
+<div class="space-y-4 mb-6">
+<div class="flex justify-between text-body-md">
+<span class="text-on-secondary-container">Subtotal (3 artículos)</span>
+<span class="font-price text-on-background">S/. 739.98</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-secondary-container">Estimación de Envío</span>
+<span class="text-on-background">Calculado al finalizar compra</span>
+</div>
+<div class="flex justify-between text-body-md text-tertiary">
+<span class="">Puntos de Recompensa Collector</span>
+<span class="font-bold">+370 pts</span>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="font-h2 text-h2 text-on-background">Total del Pedido</span>
+<span class="font-price text-display text-primary">S/. 739.98</span>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white font-label-bold py-4 rounded-sm uppercase tracking-widest scale-98-on-click transition-all hover:bg-primary mb-4 shadow-sm">Proceder al Pago</button>
+<div class="space-y-4 py-6 border-y border-outline-variant mb-6">
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<div>
+<p class="text-body-sm font-bold text-on-background">Garantía de Autenticidad</p>
+<p class="text-[10px] text-on-secondary-container uppercase leading-tight">Cada figura es 100% mercancía oficial licenciada.</p>
+</div>
+</div>
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary" data-icon="local_shipping">local_shipping</span>
+<div>
+<p class="text-body-sm font-bold text-on-background">Envío Global Express</p>
+<p class="text-[10px] text-on-secondary-container uppercase leading-tight">Envío asegurado a todo el mundo desde Akihabara, Tokio.</p>
+</div>
+</div>
+</div>
+<div>
+<p class="text-body-sm font-bold text-on-background mb-2">¿Tienes un código promocional?</p>
+<div class="flex gap-2">
+<input class="flex-1 border border-outline-variant px-3 py-2 text-body-sm focus:outline-none focus:border-primary-container rounded-sm" placeholder="Ingresar código" type="text">
+<button class="px-4 py-2 border border-on-background text-on-background font-label-bold uppercase tracking-tighter text-[10px] hover:bg-neutral-50 transition-colors rounded-sm">Aplicar</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-50 border-t border-neutral-200 mt-20">
+<div class="w-full max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<span class="text-xl font-black text-neutral-400 font-h1">MotnekiStore</span>
+<p class="mt-4 text-xs font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-neutral-500 leading-relaxed">© 2024 MotnekiStore. Tokio Akihabara. Todos los derechos reservados.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-[10px] text-on-secondary-container uppercase tracking-widest mb-2">Ayuda y Soporte</span>
+<a class="text-xs font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Información de Envío</a>
+<a class="text-xs font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Devoluciones y Cambios</a>
+<a class="text-xs font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Contactar Soporte al Coleccionista</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-[10px] text-on-secondary-container uppercase tracking-widest mb-2">Recursos</span>
+<a class="text-xs font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Guía de Especificaciones Técnicas</a>
+<a class="text-xs font-['Plus_Jakarta_Sans'] uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Authenticity Guarantee</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-[10px] text-on-secondary-container uppercase tracking-widest mb-2">Conectar</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-neutral-400 hover:text-primary cursor-pointer transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-neutral-400 hover:text-primary cursor-pointer transition-colors" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

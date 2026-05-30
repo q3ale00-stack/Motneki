@@ -1,0 +1,29 @@
+.tracking { padding: 40px 0 80px; }
+.tracking-search { display: flex; max-width: 600px; margin: 0 auto 40px; background: white; border: 2px solid var(--outline-variant); border-radius: 12px; overflow: hidden; }
+.tracking-search input { flex: 1; padding: 16px 20px; border: none; font-size: 15px; outline: none; }
+.tracking-search .btn { border-radius: 0; padding: 16px 28px; }
+.tracking-content { display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: start; }
+.tracking-left { display: flex; flex-direction: column; gap: 20px; }
+.tracking-card { border: 1px solid var(--outline-variant); border-radius: 16px; padding: 24px; background: white; }
+.tracking-steps { display: flex; justify-content: space-between; gap: 4px; }
+.tracking-step { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; }
+.tracking-step__icon .material-symbols-outlined { font-size: 28px; color: var(--outline-variant); }
+.tracking-step--done .material-symbols-outlined { color: var(--primary-container) !important; font-variation-settings: 'FILL' 1; }
+.tracking-step--active .material-symbols-outlined { color: var(--primary-container) !important; }
+.tracking-step__label { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-align: center; padding: 3px 8px; border-radius: 4px; }
+.tracking-step--done .tracking-step__label { background: var(--primary-container); color: white; }
+.tracking-step--active .tracking-step__label { background: var(--primary-container); color: white; }
+.tracking-timeline { display: flex; flex-direction: column; gap: 0; }
+.timeline-event { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--outline-variant); position: relative; }
+.timeline-event:last-child { border-bottom: none; }
+.timeline-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--outline-variant); margin-top: 6px; flex-shrink: 0; }
+.timeline-dot--active { background: var(--primary-container); }
+.timeline-time { font-size: 11px; font-weight: 700; color: var(--primary-container); display: block; margin-bottom: 2px; letter-spacing: 0.04em; }
+.timeline-event strong { font-size: 14px; display: block; margin-bottom: 2px; }
+.timeline-event p { font-size: 12px; color: var(--on-surface-variant); }
+.tracking-right { display: flex; flex-direction: column; gap: 16px; }
+.tracking-detail-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--outline-variant); font-size: 14px; }
+.tracking-detail-row:last-child { border-bottom: none; }
+.tracking-detail-row span { color: var(--on-surface-variant); }
+.tracking-back { display: block; text-align: center; color: var(--on-surface-variant); margin-top: 8px; }
+@media (max-width: 900px) { .tracking-content { grid-template-columns: 1fr; } .tracking-steps { flex-wrap: wrap; } }

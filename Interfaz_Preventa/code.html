@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Preventas Exclusivas | MotnekiStore Perú</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#ffb693",
+                    "surface-container": "#eeeeee",
+                    "success-teal": "#0062a1",
+                    "on-primary-container": "#572000",
+                    "on-surface-variant": "#5a4136",
+                    "tertiary-container": "#059eff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "outline": "#8e7164",
+                    "on-primary-fixed-variant": "#7a3000",
+                    "on-tertiary-fixed-variant": "#00497b",
+                    "primary-fixed": "#ffdbcc",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#001d35",
+                    "on-surface": "#1a1c1c",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#e2bfb0",
+                    "on-primary-fixed": "#351000",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#9ccaff",
+                    "primary-fixed-dim": "#ffb693",
+                    "secondary-container": "#e2e2e2",
+                    "surface-glass": "rgba(255, 255, 255, 0.7)",
+                    "inverse-surface": "#2f3131",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#a04100",
+                    "surface-tint": "#a04100",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary": "#5d5f5e",
+                    "surface-container-high": "#e8e8e8",
+                    "on-background": "#1a1c1c",
+                    "on-tertiary-container": "#003357",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-container": "#636564",
+                    "primary-container": "#ff6b00",
+                    "background": "#f9f9f9",
+                    "outline-subtle": "#e2bfb0",
+                    "tertiary-fixed": "#d0e4ff",
+                    "on-secondary-fixed-variant": "#454747",
+                    "tertiary": "#0062a1",
+                    "surface": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-dim": "#dadada"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding-mobile": "20px",
+                    "card-gap": "12px",
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "container-padding-desktop": "64px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-badge": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-badge": ["10px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "price-display": ["20px", {"lineHeight": "1.0", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(160, 65, 0, 0.2);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-surface-glass backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center h-16 px-container-padding-mobile md:px-container-padding-desktop max-w-[1440px] mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">MotnekiStore</div>
+<div class="hidden md:flex gap-8 items-center h-full">
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors cursor-pointer active:scale-90" href="#">Shop</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors cursor-pointer active:scale-90" href="#">Collections</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors cursor-pointer active:scale-90" href="#">Limited Edition</a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 font-semibold cursor-pointer active:scale-90" href="#">Pre-order</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:scale-95 transition-transform duration-200 active:scale-90"><span class="material-symbols-outlined text-primary">search</span></button>
+<button class="hover:scale-95 transition-transform duration-200 active:scale-90"><span class="material-symbols-outlined text-primary">favorite</span></button>
+<button class="hover:scale-95 transition-transform duration-200 active:scale-90 relative">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">2</span>
+</button>
+<button class="hover:scale-95 transition-transform duration-200 active:scale-90"><span class="material-symbols-outlined text-primary">person</span></button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1440px] mx-auto">
+<!-- Hero / Featured Section -->
+<section class="mt-8 px-container-padding-mobile md:px-container-padding-desktop">
+<div class="relative w-full aspect-[21/9] md:h-[500px] rounded-xl overflow-hidden shadow-2xl group">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A high-end anime collectible statue displayed in a luxury gallery setting. The lighting is cinematic, with soft shadows and warm amber highlights that emphasize the intricate details of the figure's dynamic pose. The background is a minimalist, white architectural space with large windows casting soft daylight. The aesthetic is clean and premium, evoking a sense of prestige and exclusive artistry for collectors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUZdo2KCQE94bOPrhvot7B17nwA0qRTeZ3h1qyWaq4SBZFqajOmbW9bc9UC1Ir9N3ZRgVZRdVrblBqHUYrWkeSX4_qpKvJYaveH3wm3f3laGvL-dAG2F5wLwZ83-c4fSKIFhFYZ_cPWOoZTPc8e3S8hKMsh5mfu_mj692H6LF1t1NjJdyfli5wwT8z9CyDCb4oscstGgfqQnGf7XSFv-hw8AZ6Bsul65vQ_N7wkFDkBF57gl8Iyi0qinXvpydQyc-tTkhaERboTjG8"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center p-container-padding-desktop">
+<div class="max-w-xl space-y-6">
+<div class="inline-block px-3 py-1 bg-primary text-white font-label-caps text-label-caps rounded-full tracking-widest">LANZAMIENTO ESTELAR</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white leading-tight">Masterpiece: <br/>Eternal Guardian</h1>
+<p class="font-body-lg text-body-lg text-white/80 max-w-md">Reserva hoy la pieza central de tu colección. Edición limitada de 100 unidades para todo el Perú.</p>
+<div class="flex gap-4">
+<button class="px-8 py-4 bg-primary-container text-on-primary-container rounded-full font-semibold hover:scale-105 transition-transform active:scale-95 shadow-lg">RESERVAR AHORA</button>
+<button class="px-8 py-4 border border-white/40 text-white rounded-full font-semibold hover:bg-white/10 backdrop-blur-sm transition-all active:scale-95">DETALLES</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Pre-orders Carousel -->
+<section class="pt-section-gap px-container-padding-mobile md:px-container-padding-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-primary">DESTACADOS DE LA SEMANA</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md font-bold">Preventas Más Populares</h2>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-container hover:text-white transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-container hover:text-white transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="flex gap-gutter overflow-x-auto pb-8 hide-scrollbar snap-x">
+<!-- Popular Card 1 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
+<div class="relative aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-6 group-hover:shadow-xl transition-shadow">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A close-up of a premium anime action figure with metallic finishing and translucent parts. The figure is posed dynamically on a minimalist white base. High-key studio lighting creates crisp reflections on the surface. The background is a soft gradient of light gray, emphasizing the product's high-quality paint and intricate sculpting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlH3hDIsxLYpn-4_k_IIJlvnNBOaU601I3zQIW2Fctot4lphITXLi8ZOuyCzdgF5atc0fbjVxLL6IFXFcF_Mz6L8v-GzBQ_e6FBB0jxtMkXEjsXvNXhRDRSlgOKKICOPwu0fDXy-BlXeSfKuUpDMUv59FM6Uikcf7JP61Ag_JJ6O6Azj5BWY4E6lBO8tgQym1Ht_8Osm0rG_AyVZEjEvd-hdXdP8BM_ArWJ_ud_5Hsv6hJ8DMhDTAjIMluSHqD1b7EthlWDqunb16y"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary text-white font-label-badge text-label-badge px-3 py-1 rounded-full">PREVENTA</span>
+<span class="bg-on-surface text-white font-label-badge text-label-badge px-3 py-1 rounded-full">TOP 1</span>
+</div>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md">Zenith Soul: Phoenix Rebirth</h3>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">S/ 849.00</span>
+<span class="font-label-caps text-label-caps text-secondary">ETA: OCT 2024</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-label-caps font-label-caps text-on-surface-variant">
+<span>RESERVAS</span>
+<span>85%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[85%] rounded-full shadow-[0_0_8px_rgba(255,107,0,0.4)]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Popular Card 2 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
+<div class="relative aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-6 group-hover:shadow-xl transition-shadow">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A sophisticated boutique collectible, an anime character in a high-fashion aesthetic. The figure is surrounded by abstract glass elements that catch the light. The photography is clean, focusing on the luxury feel of the item. Soft, ethereal lighting fills the frame, creating a premium and gallery-like atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX9mWnwlXrrBVgw-gfIqFQWrI7pr0Ur8u1dqcTsjk6yJssPKpmHMNxo3zMxMADYiQO8en5RV4qINYLw3O0x1ZZR6wkfa3MuhYwTOOpnAJ0k3ojWy5PPOCZy3WIrjVuOgNZDC7kq9iGqA8Y3zw6S51NLnaUKQfRXcG6-EUoFiw89al4yMV1PjI6pNinuFExNl0p6oZz1R5t9IYxjiNqPjvFyzcfASG_9L7nT6LoX_ef-NbLybHG7RxbAFtiBBXfJk9nsQlOL8i2lMnH"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white font-label-badge text-label-badge px-3 py-1 rounded-full">PREVENTA</span>
+</div>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md">Noir Elegance: Midnight Ver.</h3>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">S/ 620.00</span>
+<span class="font-label-caps text-label-caps text-secondary">ETA: DIC 2024</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-label-caps font-label-caps text-on-surface-variant">
+<span>RESERVAS</span>
+<span>42%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[42%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Popular Card 3 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
+<div class="relative aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden mb-6 group-hover:shadow-xl transition-shadow">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A detailed robotic anime figure with weathered paint effects and intricate mechanical details. The figure stands in a neutral museum-like environment with focused spotlighting. The textures of the metal and armor are highly visible. The overall mood is one of authenticity and technical mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpSCkUkWNuh1hSOvMSeRIimloTEyiA5QAoRy28X_Pq7bkNf1yATLL2RaJP2nVN52H9wNkZNCfyY8O3tf9P_3Y7XzVn6wyKgQ2RmAqU7Us-yu7WIgSb1Rk7HES4mbkUHpnGC3GtMN_7fhx0S7fXzD3itrwnjprp1T7aHBRui0jrHghjQQay0hPgcRdo2KQo0nWFSKCONgbatTm7CI5YZhXlx6RHThyuWxwFhDgU-88vzaHOneEaxy1Mhh2QjAJpfsizaN2UDhmn2a66"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white font-label-badge text-label-badge px-3 py-1 rounded-full">PREVENTA</span>
+</div>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md">Mecha Unit-01: Beserker</h3>
+<div class="flex justify-between items-center">
+<span class="font-price-display text-price-display text-primary">S/ 1,299.00</span>
+<span class="font-label-caps text-label-caps text-secondary">ETA: NOV 2024</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-label-caps font-label-caps text-on-surface-variant">
+<span>RESERVAS</span>
+<span>92%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[92%] rounded-full shadow-[0_0_8px_rgba(255,107,0,0.4)]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Why Pre-order with us -->
+<section class="py-section-gap px-container-padding-mobile md:px-container-padding-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 p-12 bg-surface-container-low rounded-xl flex flex-col justify-between group hover:bg-white transition-all duration-500 border border-transparent hover:border-outline-variant/30">
+<div class="max-w-md space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl">verified_user</span>
+<h2 class="font-display-lg text-display-lg-mobile font-bold">Garantía de Autenticidad Motneki</h2>
+<p class="font-body-md text-body-md text-secondary">Cada preventa está respaldada por una certificación única que asegura que tu pieza es 100% original de fabricante. Sin intermediarios dudosos.</p>
+</div>
+<div class="mt-12">
+<button class="flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all">LEER MÁS <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+<div class="space-y-gutter">
+<div class="p-8 bg-primary-container text-on-primary-container rounded-xl flex flex-col gap-4">
+<span class="material-symbols-outlined text-white text-3xl">local_shipping</span>
+<h3 class="font-headline-md text-headline-md font-bold text-white">Envío Preferencial</h3>
+<p class="font-body-md text-body-md text-white/90">Los usuarios que reservan reciben sus productos 48h antes del lanzamiento oficial en tienda.</p>
+</div>
+<div class="p-8 bg-surface-container-low rounded-xl flex flex-col gap-4 border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<h3 class="font-headline-md text-headline-md font-bold">Cuotas Sin Intereses</h3>
+<p class="font-body-md text-body-md text-secondary">Reserva con solo el 20% y paga el resto en hasta 6 cuotas fijas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- All Pre-orders Grid -->
+<section class="pb-section-gap px-container-padding-mobile md:px-container-padding-desktop">
+<div class="flex items-center gap-6 mb-12">
+<h2 class="font-headline-md text-headline-md font-bold whitespace-nowrap">Todas las Preventas</h2>
+<div class="h-[1px] w-full bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Loop Sim -->
+<script>
+                    const products = [
+                        { name: "Saber Lily: Victory", price: "S/ 580.00", eta: "ENE 2025", progress: 30, img: "image-sub-1" },
+                        { name: "Hunter X: Silent Night", price: "S/ 420.00", eta: "DIC 2024", progress: 65, img: "image-sub-2" },
+                        { name: "Vanguard Alpha", price: "S/ 710.00", eta: "FEB 2025", progress: 15, img: "image-sub-3" },
+                        { name: "Cyberpunk Edge", price: "S/ 940.00", eta: "MAR 2025", progress: 45, img: "image-sub-4" },
+                        { name: "Spirit Oracle", price: "S/ 390.00", eta: "DIC 2024", progress: 80, img: "image-sub-5" },
+                        { name: "Dragon Lord", price: "S/ 1,500.00", eta: "ABR 2025", progress: 10, img: "image-sub-6" },
+                        { name: "Neon District: Shogun", price: "S/ 670.00", eta: "OCT 2024", progress: 95, img: "image-sub-7" },
+                        { name: "Stellar Wind: Voyager", price: "S/ 525.00", eta: "NOV 2024", progress: 55, img: "image-sub-8" }
+                    ];
+
+                    document.write(products.map(p => `
+                        <div class="group cursor-pointer">
+                            <div class="relative aspect-[3/4] bg-surface-container-low rounded-lg overflow-hidden mb-4 border border-transparent hover:border-outline-variant transition-all">
+                                <img src="${p.img}" 
+                                     data-alt="A clean product shot of an anime collectible against a neutral white background. Minimalist styling emphasizes the product's quality and craftsmanship. The lighting is soft and uniform, perfect for an e-commerce gallery focused on luxury collectibles." 
+                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute bottom-4 right-4 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                                    <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg"><span class="material-symbols-outlined">add_shopping_cart</span></button>
+                                </div>
+                                <div class="absolute top-3 left-3">
+                                    <span class="bg-surface-glass backdrop-blur-sm text-primary font-label-badge text-label-badge px-2 py-1 rounded border border-primary/20">PREVENTA</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="font-body-md text-body-md font-bold truncate">${p.name}</h4>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-price-display text-price-display text-on-surface">${p.price}</span>
+                                    <span class="text-[10px] font-bold text-secondary-fixed-dim">${p.eta}</span>
+                                </div>
+                                <div class="h-1 w-full bg-surface-container rounded-full mt-2">
+                                    <div class="h-full bg-primary w-[${p.progress}%] rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join(''));
+                </script>
+</div>
+<div class="mt-20 flex justify-center">
+<button class="px-12 py-4 border border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all active:scale-95">CARGAR MÁS PRODUCTOS</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-[1440px] mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md font-bold text-primary">MotnekiStore</div>
+<p class="font-body-md text-body-md text-secondary max-w-xs leading-relaxed">
+                    Elevando el coleccionismo al nivel de arte. La boutique de preventas más exclusiva de Latinoamérica.
+                </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-secondary hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-secondary hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-secondary hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 md:col-span-2">
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary">COMPRA</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors underline" href="#">Shipping Information</a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors underline" href="#">Refund Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors underline" href="#">Authenticity Guarantee</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary">LEGAL</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors underline" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors underline" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors underline" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-container-padding-mobile md:px-container-padding-desktop py-8 border-t border-outline-variant/10 text-center md:text-left">
+<span class="font-body-md text-body-md text-secondary">© 2024 MotnekiStore Premium Collectibles. Elevated Artistry.</span>
+</div>
+</footer>
+<!-- FAB for Newsletter / Contact -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary-container text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform z-50">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</button>
+<script>
+        // Micro-interactions for smooth scrolling or hover effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Dynamic sticky nav shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

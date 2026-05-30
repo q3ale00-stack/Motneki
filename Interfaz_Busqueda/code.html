@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MotnekiStore Perú - Búsqueda Premium</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#a04100",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container": "#eeeeee",
+                        "surface-tint": "#a04100",
+                        "success-teal": "#0062a1",
+                        "inverse-primary": "#ffb693",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#454747",
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-container": "#636564",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "outline-subtle": "#e2bfb0",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-surface-variant": "#5a4136",
+                        "on-primary-fixed": "#351000",
+                        "tertiary": "#0062a1",
+                        "tertiary-container": "#059eff",
+                        "primary-fixed-dim": "#ffb693",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "surface-glass": "rgba(255, 255, 255, 0.7)",
+                        "background": "#f9f9f9",
+                        "primary-container": "#ff6b00",
+                        "surface-dim": "#dadada",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "secondary": "#5d5f5e",
+                        "on-surface": "#1a1c1c",
+                        "outline-variant": "#e2bfb0",
+                        "surface": "#f9f9f9",
+                        "tertiary-fixed": "#d0e4ff",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#572000",
+                        "outline": "#8e7164",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#001d35",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "on-background": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-container": "#003357"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "card-gap": "12px",
+                        "container-padding-mobile": "20px",
+                        "section-gap": "120px",
+                        "unit": "8px",
+                        "container-padding-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "price-display": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-badge": ["Plus Jakarta Sans"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "price-display": ["20px", {"lineHeight": "1.0", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-badge": ["10px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-overlay {
+            backdrop-filter: blur(20px);
+            background-color: rgba(249, 249, 249, 0.9);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background selection:bg-primary-container selection:text-white">
+<!-- TopNavBar (Shared Component Logic) -->
+<nav class="sticky top-0 w-full z-50 bg-surface-glass backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center h-16 px-container-padding-mobile md:px-container-padding-desktop max-w-[1440px] mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">MotnekiStore</div>
+<div class="hidden md:flex gap-8">
+<a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Shop</a>
+<a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Collections</a>
+<a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Limited Edition</a>
+<a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Pre-order</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="cursor-pointer active:scale-90 hover:scale-95 transition-transform duration-200" id="openSearch">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+</button>
+<button class="cursor-pointer active:scale-90 hover:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-secondary" data-icon="favorite">favorite</span>
+</button>
+<button class="cursor-pointer active:scale-90 hover:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-secondary" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="cursor-pointer active:scale-90 hover:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-secondary" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Placeholder (To show overlay behavior) -->
+<main class="min-h-screen py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-[1440px] mx-auto">
+<section class="flex flex-col gap-8">
+<h1 class="font-display-lg text-display-lg text-on-background">Curando la Excelencia del Coleccionismo.</h1>
+<p class="text-body-lg font-body-lg text-secondary max-w-2xl">Descubre las piezas más exclusivas de la cultura anime, desde figuras de escala 1/4 hasta ediciones limitadas importadas directamente de Japón.</p>
+</section>
+</main>
+<!-- PREMIUM SEARCH OVERLAY -->
+<div class="fixed inset-0 z-[100] glass-overlay transition-all duration-500 ease-in-out opacity-0 pointer-events-none translate-y-4" id="searchOverlay">
+<!-- Header / Input Area -->
+<div class="w-full bg-white/80 border-b border-outline-variant/20 shadow-sm sticky top-0">
+<div class="max-w-[1440px] mx-auto px-container-padding-mobile md:px-container-padding-desktop h-24 md:h-32 flex items-center gap-6">
+<span class="material-symbols-outlined text-primary text-4xl hidden md:block" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-headline-md text-headline-md placeholder:text-secondary/40 text-on-background" id="searchInput" placeholder="Busca tu próxima pieza de colección (ej. Evangelion, Naruto, Nendoroid)..." type="text"/>
+<button class="group flex items-center justify-center p-3 rounded-full hover:bg-surface-container transition-colors" id="closeSearch">
+<span class="material-symbols-outlined text-secondary group-hover:rotate-90 transition-transform duration-300" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<!-- Results / Suggestions Scrollable Canvas -->
+<div class="max-w-[1440px] mx-auto px-container-padding-mobile md:px-container-padding-desktop py-12 overflow-y-auto max-h-[calc(100vh-128px)] no-scrollbar">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Contextual Data -->
+<div class="lg:col-span-4 flex flex-col gap-12">
+<!-- Recent Searches -->
+<div class="flex flex-col gap-4">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Búsquedas Recientes</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-surface-container-low hover:bg-primary-container hover:text-white transition-all rounded-full text-body-md font-body-md border border-outline-variant/30 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="history">history</span>
+                                Asuka Langley
+                            </button>
+<button class="px-4 py-2 bg-surface-container-low hover:bg-primary-container hover:text-white transition-all rounded-full text-body-md font-body-md border border-outline-variant/30 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="history">history</span>
+                                Chainsaw Man
+                            </button>
+<button class="px-4 py-2 bg-surface-container-low hover:bg-primary-container hover:text-white transition-all rounded-full text-body-md font-body-md border border-outline-variant/30 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="history">history</span>
+                                Nendoroid Denji
+                            </button>
+</div>
+</div>
+<!-- Trending / Popular Categories -->
+<div class="flex flex-col gap-6">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Categorías Populares</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="group relative aspect-square rounded-lg overflow-hidden cursor-pointer bg-surface-container-low">
+<img alt="Scale Figures" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-quality close-up of a premium anime scale figure with intricate details and vibrant colors. The figure is showcased in a professional photography studio setting with soft, cinematic lighting that highlights the translucent materials and sharp sculpting. The background is a clean, neutral gray, emphasizing the artistic value of the collectible. Sophisticated and luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbvRZzkZteLzyV93_QXp96-LxR0zkX8xJxl6HQYWiEijk_9P4_7tLRcDWw-KDfLt7_IUY9EsMWUQthxhZGFxYjaeYwWALmer9htxgG4nfoeOCpUhPpLKwKVsj0sKxkhOjx72p60Zppz6c2FnHBWtLEzRD_qYqGjAbkGNQ8B5iiL3fBjmgsMhtiXlZL4vVDgyh4ohLjuAk3DD0qVR-BPpYgVbwCZZeUDG1lloPp3fI2It35ByKlDUP6CSvM1vk03aDqmGDBT6n3K7e3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 transition-opacity group-hover:opacity-100"></div>
+<span class="absolute bottom-4 left-4 text-white font-headline-md text-body-md font-bold">Scale Figures</span>
+</div>
+<div class="group relative aspect-square rounded-lg overflow-hidden cursor-pointer bg-surface-container-low">
+<img alt="Nendoroids" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A charming arrangement of various Nendoroid figures with their expressive faces and tiny accessories. The scene is lit with bright, warm high-key lighting that evokes a friendly and accessible lifestyle boutique feel. The composition uses shallow depth of field to focus on one central character, while others create a colorful blur in the background. High-end product photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDfRfFQ5qQxwEeYSpsQldJmC7hb6s9ypABIMLZ7SbT4jDKkJflb5-BF8SUDB4h7FcW2ExmenMFjDMQgk19B1MNUZBJGvj9CbPaaw33ZwVNB1wV59mxws1GZUK3O3hwAJyhcugFuCUDBk_tVPY9fXWbWhp8o5WOBbz8OXCRYKjYBz71TzYIke1-0DcvqI5cbMms8xJvGXGwdTNEJ1N_3Jwi5IAoTTT0e9TQB2muyuVI8Icudo986SGPuM95t1LI7E8OxmR8SUMnq-Ks"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 transition-opacity group-hover:opacity-100"></div>
+<span class="absolute bottom-4 left-4 text-white font-headline-md text-body-md font-bold">Nendoroids</span>
+</div>
+<div class="group relative aspect-square rounded-lg overflow-hidden cursor-pointer bg-surface-container-low">
+<img alt="Exclusivos" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A limited edition premium collectible box with high-end packaging design, featuring metallic foil accents and minimalist branding. The lighting is dramatic and focused, highlighting the premium textures of the box and the rarity of the item inside. The overall mood is prestigious and exclusive, set against a dark, velvet-like background that screams luxury artistry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-9oLB7SrH5M12OiZK7XmJQnK4i553CMjAy6bzNxcfIGdMT-T3B3Dcqz8dwhbbs48wyx8PkHo_CaiSwtkslW4Zg44u25D-Lg0R8GbJ28gVmLmHaWO0Oc2likyS2BrbJsBSdITguYZM_HACT6LlgshTPZxnSQ1OcjZwy3niFHoItnanCcebhbLjNNNPhv6HsjgzAeo_ZnQ5wCkAsxvv5GexQL7UpeZTOXBYoj3FjJYrqoiggMlwh9lS_cIsZ4E1HZj_BuCjpK1KOXjR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 transition-opacity group-hover:opacity-100"></div>
+<span class="absolute bottom-4 left-4 text-white font-headline-md text-body-md font-bold">Exclusivos</span>
+</div>
+<div class="group relative aspect-square rounded-lg overflow-hidden cursor-pointer bg-surface-container-low">
+<img alt="Art Prints" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist gallery wall displaying high-end anime art prints framed in clean, white frames. The room is filled with soft natural light from a large window, creating a serene and sophisticated atmosphere. The colors of the art are vibrant yet tasteful, blending seamlessly into a modern, airy interior design. The aesthetic is approachably exclusive and artistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl1POxlpRuzlul3vXaCUZqZuIpdFRqLsrZOM8N1SAJGUB22tWyOfTThSyD6gfi7A71UyjzgnoPc-vo1-Eq03pknedCo5ngzQx7vZm0e5fYfAp9A8whhq4pH2rSMu1WV4yaikrh_BHQcmD_psqTmQwEN4J_8oqSEEg8AnBrNuO9Dz8Dxy9smPNM9KJmw30YpjNddvCM94Tn4Q627jzy1Z4YR4ctc4c-xnvu-TjPgwHzB6VWEMo4LuvgwOP4-sLTp4z-kzOyq-q4C1-C"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 transition-opacity group-hover:opacity-100"></div>
+<span class="absolute bottom-4 left-4 text-white font-headline-md text-body-md font-bold">Art Prints</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Live Results Preview -->
+<div class="lg:col-span-8 flex flex-col gap-8 opacity-0 translate-y-8 transition-all duration-700 delay-100" id="searchResultsContainer">
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Sugerencias Destacadas</h3>
+<a class="text-primary font-bold text-body-md hover:underline" href="#">Ver todos los resultados</a>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Result Item 1 -->
+<div class="group flex items-center gap-6 p-4 rounded-lg hover:bg-white hover:shadow-soft transition-all cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="w-24 h-24 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A detailed macro shot of a high-end anime action figure, showcasing the precision engineering of the joints and the matte finish of the paint. The lighting is cool-toned and professional, emphasizing the high-tech laboratory precision of the product. Set against a clean white background, the figure looks like a piece of fine art rather than a toy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT5PIQL9JaAsZAoJ9qPPtdO7e0zknLuBhsgLQJKFBxHbmKzH7JV4Ad3wBmzbS_Ivs7A8sdVcnMojSEo9PAlPtBEOHVPstgjtwoxKEPMf5r7KIUDDfqs-qWIwEBGQE449aOWDyq4Pzr7X76PY-loZUJBGTxpmJ70N7iF46WhJ7EN2v1trLWVDB_VNiFxkUqmjIY0v4kXdMy3c7K4WSc_K1_1gUaj3xuXpuoHGGBTtRcgNqBsV9fpkEmMKpd-dVdLMNriDcMFPDEzjB5"/>
+</div>
+<div class="flex-grow flex flex-col gap-1">
+<span class="font-label-badge text-label-badge bg-primary/10 text-primary px-2 py-0.5 rounded-full w-fit">POPULAR</span>
+<h4 class="font-headline-md text-body-lg font-bold text-on-background group-hover:text-primary transition-colors">Evangelion: Unit-01 - Dynaction Edition</h4>
+<p class="text-secondary text-body-md">Bandai Spirits • 40cm Figure</p>
+</div>
+<div class="text-right">
+<span class="font-price-display text-price-display text-on-background block">S/. 899.00</span>
+<span class="text-label-caps text-primary text-[10px] font-bold">EN STOCK</span>
+</div>
+</div>
+<!-- Result Item 2 -->
+<div class="group flex items-center gap-6 p-4 rounded-lg hover:bg-white hover:shadow-soft transition-all cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="w-24 h-24 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A stunning 1/7 scale figure of a female anime character in a dynamic pose, with flowing hair and fabric sculpted with incredible fluidity. The lighting is warm and ethereal, highlighting the pearlescent paint effects and fine details. The clean, minimalist background ensures all focus is on the prestige and authenticity of the collectible. Museum-quality presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgF35kI3LpUr36-XHsaw0LcOOse8NCW8AXJ0armJtxl86gBfKGXO9FFPyluWqrha8_Pj3lU95fy6zQsuG6t2YgiL4jubVtm51RrpTgfP2raW0zKZkrroBE8SHoRwKgAaJ1E3Qx_EUQRRfkqrPn6muHq2wzhlvgKNYnSi6vKOKVxyjVmTk0i16dXkl7PSiuApZdK2D_jAiMQDay-ngg-OZou_A08ANEMOltn4OXT3kR7hWugmXIbqIWAUB0RH_H1GLBQ1w-4_-R-vZL"/>
+</div>
+<div class="flex-grow flex flex-col gap-1">
+<span class="font-label-badge text-label-badge bg-on-surface text-white px-2 py-0.5 rounded-full w-fit">LIMITED</span>
+<h4 class="font-headline-md text-body-lg font-bold text-on-background group-hover:text-primary transition-colors">Makima - Chain Reaction 1/7 Scale</h4>
+<p class="text-secondary text-body-md">Good Smile Company • Chainsaw Man</p>
+</div>
+<div class="text-right">
+<span class="font-price-display text-price-display text-on-background block">S/. 1,250.00</span>
+<span class="text-label-caps text-secondary text-[10px] font-bold">PRE-ORDEN</span>
+</div>
+</div>
+<!-- Result Item 3 -->
+<div class="group flex items-center gap-6 p-4 rounded-lg hover:bg-white hover:shadow-soft transition-all cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="w-24 h-24 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A group of colorful Nendoroid figures displayed on a clean white shelf, each with a different facial expression. The lighting is bright and even, highlighting the vibrant colors and cute aesthetics of the figures. The composition is balanced and airy, reflecting the lifestyle boutique theme of the store. High-end editorial style product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwY-2I5k2oui48f3bhO9feu9E2qoh2YW4asHYzKQnOG9swj3QoJOPPviYLWCOQ7hRDDxN2l97UJKQIOojN2BOFz6JkMd2rUvgIXuNq1NLKm7LqSNZJDO-kJnfremtYaBsRUOldh8v-La5bX9RGSXUTj4W0WlpuLBfmvFOdfbCzd3dCd6-eH8IS-GRLoDR8cwhDmDSlybjv-z_8n8nPAe8xlBhMnQ-sxOeCotKy1tCtkKoir8W689weMTito-olOQsSk_JNVblPLIei"/>
+</div>
+<div class="flex-grow flex flex-col gap-1">
+<h4 class="font-headline-md text-body-lg font-bold text-on-background group-hover:text-primary transition-colors">Nendoroid Denji - Blood Fiend Style</h4>
+<p class="text-secondary text-body-md">Good Smile Company • Articulado</p>
+</div>
+<div class="text-right">
+<span class="font-price-display text-price-display text-on-background block">S/. 245.00</span>
+<span class="text-label-caps text-primary text-[10px] font-bold">EN STOCK</span>
+</div>
+</div>
+<!-- Result Item 4 -->
+<div class="group flex items-center gap-6 p-4 rounded-lg hover:bg-white hover:shadow-soft transition-all cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="w-24 h-24 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A high-end collectible art book featuring stunning anime illustrations, lying open on a minimalist wooden table. The room is filled with soft, diffused sunlight, creating a warm and inviting atmosphere. The paper quality of the book is evident in the close-up, showcasing rich colors and sharp lines. The aesthetic is sophisticated and gallery-inspired." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWKW-HYdc41uCXPt9NWj_wgXY3iKsqJqehQQy2c4PifGl2WEZP7EQGXiY6OucvotqczsYURNGxJOyy-hOsLYAC9H9R92GUrqvIhA6ChfXscrJ3xolDa06NhJhQ_3en-gSTf_EpZeUJwZce-6PJl3YF-94QUKxS6qLAlwCXXBemevRGAu3tTCBRuutoFXf9xIukwVfGt6N2wQBdsyrM9Xn1GfHcEYToGqUjJuaRPbrt77pLsOkCJtWFbGlbyjW9KJnB3G3iOM0aPHPy"/>
+</div>
+<div class="flex-grow flex flex-col gap-1">
+<h4 class="font-headline-md text-body-lg font-bold text-on-background group-hover:text-primary transition-colors">Official Artbook: The Art of Evangelion</h4>
+<p class="text-secondary text-body-md">Studio Khara • Hardcover</p>
+</div>
+<div class="text-right">
+<span class="font-price-display text-price-display text-on-background block">S/. 180.00</span>
+<span class="text-label-caps text-primary text-[10px] font-bold">EN STOCK</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer (Shared Component Logic) -->
+<footer class="bg-surface-container-low border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-[1440px] mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md font-bold text-primary">MotnekiStore</div>
+<p class="text-secondary text-body-md max-w-xs">Elevando el coleccionismo a una forma de arte. Curaduría premium para el fanático peruano.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<a class="text-secondary hover:text-primary transition-colors underline font-body-md text-body-md" href="#">Shipping Information</a>
+<a class="text-secondary hover:text-primary transition-colors underline font-body-md text-body-md" href="#">Refund Policy</a>
+<a class="text-secondary hover:text-primary transition-colors underline font-body-md text-body-md" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-secondary hover:text-primary transition-colors underline font-body-md text-body-md" href="#">Terms of Service</a>
+<a class="text-secondary hover:text-primary transition-colors underline font-body-md text-body-md" href="#">Authenticity Guarantee</a>
+<a class="text-secondary hover:text-primary transition-colors underline font-body-md text-body-md" href="#">Contact Us</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-headline-md text-body-lg font-bold text-primary">Suscríbete al Gremio</h3>
+<div class="relative flex">
+<input class="w-full rounded-full bg-white border-outline-variant/30 focus:border-primary focus:ring-0 px-6 py-3" placeholder="tu@email.com" type="email"/>
+<button class="absolute right-1 top-1 bottom-1 px-6 bg-primary-container text-white rounded-full font-bold text-sm hover:opacity-90 transition-opacity">IR</button>
+</div>
+<p class="text-[12px] text-secondary">© 2024 MotnekiStore Premium Collectibles. Elevated Artistry.</p>
+</div>
+</div>
+</footer>
+<script>
+        const openSearch = document.getElementById('openSearch');
+        const closeSearch = document.getElementById('closeSearch');
+        const searchOverlay = document.getElementById('searchOverlay');
+        const searchInput = document.getElementById('searchInput');
+        const resultsContainer = document.getElementById('searchResultsContainer');
+
+        const toggleSearch = (show) => {
+            if (show) {
+                searchOverlay.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                searchOverlay.classList.add('opacity-100', 'translate-y-0');
+                document.body.classList.add('overflow-hidden');
+                setTimeout(() => searchInput.focus(), 300);
+            } else {
+                searchOverlay.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                searchOverlay.classList.remove('opacity-100', 'translate-y-0');
+                document.body.classList.remove('overflow-hidden');
+            }
+        };
+
+        openSearch.addEventListener('click', () => toggleSearch(true));
+        closeSearch.addEventListener('click', () => toggleSearch(false));
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') toggleSearch(false);
+        });
+
+        // Simulating search results appearance
+        searchInput.addEventListener('input', (e) => {
+            if (e.target.value.length > 2) {
+                resultsContainer.classList.remove('opacity-0', 'translate-y-8');
+            } else {
+                resultsContainer.classList.add('opacity-0', 'translate-y-8');
+            }
+        });
+
+        // Visual feedback for interactions
+        const items = document.querySelectorAll('.group');
+        items.forEach(item => {
+            item.addEventListener('mousedown', () => {
+                item.style.transform = 'scale(0.98)';
+            });
+            item.addEventListener('mouseup', () => {
+                item.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

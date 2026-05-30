@@ -1,0 +1,8 @@
+.register-page { min-height: calc(100vh - 64px); padding: 48px 0; background: var(--surface); }
+.register-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.register-promo-img { border-radius: 16px; overflow: hidden; }
+.register-promo-img img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+.register-form-card { background: white; border: 1px solid var(--outline-variant); border-radius: 20px; padding: 36px; }
+.register-form-card .form-group { margin-bottom: 16px; }
+.register-form-card .form-group label { margin-bottom: 6px; }
+@media (max-width: 900px) { .register-layout { grid-template-columns: 1fr; } .register-promo { display: none; } }

@@ -1,0 +1,398 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MotnekiStore - Premium Anime Collectibles</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#ffb693",
+                        "secondary": "#5f5e5e",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-primary-fixed": "#351000",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "secondary-container": "#e2dfde",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary": "#a04100",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "primary-fixed": "#ffdbcc",
+                        "tertiary-container": "#059eff",
+                        "primary-fixed-dim": "#ffb693",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface": "#f9f9f9",
+                        "tertiary": "#0062a1",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#003357",
+                        "on-surface-variant": "#5a4136",
+                        "on-tertiary-fixed": "#001d35",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed": "#d0e4ff",
+                        "background": "#f9f9f9",
+                        "primary-container": "#ff6b00",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-container": "#572000",
+                        "surface-tint": "#a04100",
+                        "outline-variant": "#e2bfb0",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "outline": "#8e7164",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-container": "#636262",
+                        "surface-container": "#eeeeee",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "unit": "8px",
+                        "container-padding-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "price-display": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "label-caps": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "price-display": ["20px", {"lineHeight": "1.0", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+<div class="flex justify-between items-center h-16 px-container-padding-desktop max-w-[1440px] mx-auto w-full">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-headline-md font-extrabold text-primary tracking-tight" href="#">MotnekiStore</a>
+<nav class="hidden md:flex gap-6">
+<a class="font-label-bold text-label-caps text-primary border-b-2 border-primary pb-1" href="#">Inicio</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Catálogo</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Preventas</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Exclusivos Japón</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Comunidad</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-transform active:scale-95">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-transform active:scale-95">person</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-transform active:scale-95">favorite</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-transform active:scale-95 relative">
+                    shopping_cart
+                    <span class="absolute -top-2 -right-2 bg-primary-container text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="mt-16">
+<!-- Hero Section -->
+<section class="relative w-full h-[870px] bg-surface-container-lowest overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center opacity-90" data-alt="A cinematic, high-definition close-up shot of an exquisite anime figure with pearlized finishes. The setting is a minimalist, bright white gallery with soft natural light streaming from the side, creating delicate highlights and soft shadows. The overall mood is sophisticated and premium, reflecting a luxury boutique aesthetic with a clean white and orange color harmony." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF7Y-C5L0mDmsaw1E1T3azfM9Vhv5y9-XQsryoq3dyx8X0o2H_nNBAYgTK9vvm7XUjD7emPA1QddO8zr2THpZ-FaPKEmsL4QpzuosL5spsyQy5QJg6mZzzLX3bPxkED44CATyLEVWRhrCGS8R-BzRi9i7Jnha_8nttT3DoaOKaHCuKs5jDqwxGx1_NGc3oc4NoNe4-rME6Ud4D3VJuIk0THUPkKkMFBHI395jDgGuvP6cN3qIylIq5J9McB5qtlTJn70gHTQTHb5M7">
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1440px] mx-auto px-container-padding-desktop w-full">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-4 block">ELEGANCIA EN CADA DETALLE</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-8">Colecciona tu universo favorito</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed max-w-lg">
+                        Piezas exclusivas importadas directamente desde Japón. Curamos lo mejor del mundo del coleccionismo para elevar tu pasión al nivel de arte.
+                    </p>
+<div class="flex items-center gap-6">
+<button class="bg-primary-container text-on-primary font-label-caps px-10 py-4 rounded-full hover:shadow-lg transition-all active:scale-95">VER CATÁLOGO</button>
+<button class="border border-outline text-on-surface font-label-caps px-10 py-4 rounded-full hover:bg-surface-variant transition-all active:scale-95">RECIÉN LLEGADOS</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Figures Section -->
+<section class="py-section-gap max-w-[1440px] mx-auto px-container-padding-desktop">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-surface">Tendencias de la Semana</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Las piezas más buscadas por coleccionistas de todo el mundo.</p>
+</div>
+<a class="text-primary font-label-caps border-b border-primary pb-1 hover:opacity-70 transition-opacity" href="#">VER TODAS</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-[24px] overflow-hidden mb-6 bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-end collectible figure of a legendary hero, showcasing intricate armor details and vibrant paint. The photography is clean, set against a seamless off-white background with professional studio lighting. The aesthetic is gallery-focused, emphasizing the high-quality craftsmanship of the anime merchandise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG8_WzEkUNLTUEfjT7Scpf1d2qd18luXVu8fmqZjXL5eLriFp2XkXxaL0_rlDQqlhujkqS2G6kJQL8L-wvBwuQMHaBuLnWWn2W3F6C0bAky23ixOu06M-rrWji9bjNd1aOvEI42oo4nTRSbNbEp2ErOioRdeaEtVJMML-3zGViPI4kXgxOLDv03C-OX_vFw0fdrvFPR-DYKO4OJYm_4i5JSLbVtXN1Qys5OlY5tkBtIg2l8DNF7BBD2ULt9HQk8kbTwAZk9w6qUPmw">
+<div class="absolute top-4 left-4 bg-primary-container text-white px-3 py-1 rounded-full text-[10px] font-bold">POPULAR</div>
+</div>
+<div class="px-2">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Saber Alter 1/7 Scale</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-3">GOOD SMILE COMPANY</p>
+<div class="flex items-center justify-between">
+<span class="font-price-display text-price-display text-primary">$189.99</span>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary">shopping_bag</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-[24px] overflow-hidden mb-6 bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxury anime character statue featuring dynamic poses and translucent energy effects. Captured with soft ambient occlusion in a bright, modern light-mode environment. The lighting is soft and even, highlighting the vibrant oranges and deep contrasts of the collector's item." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAi4xrxs09y_ua9nzZsf5tJyIN3QjR9F_jW_Q4XUE6gd0-FOt301_8bUC7c-32Adj2tmmUfLayej1PBhWP0hgcWMA17GXInv5dnktq-1RdzExQXUkFf6m1z8_8L5tgJmpYrE3cUwcrpUHTLxsNgS3AS9oIDhgfFT8R3cdbZ-iC_eEwz2H4L1CD58lQg3r1n4faXae18C9XjonQFJX-ysiMaOlgR20DkBs67Oh8IDapVX2_WU14yzxickBuDU_U050mdKNK7Eg5hGVE">
+</div>
+<div class="px-2">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Goku Ultra Instinct</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-3">BANDAI SPIRITS</p>
+<div class="flex items-center justify-between">
+<span class="font-price-display text-price-display text-primary">$245.00</span>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary">shopping_bag</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-[24px] overflow-hidden mb-6 bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A highly detailed robotic collectible figure in a minimalist white setting. Professional photography highlights the metallic textures and precise engineering of the figure. The visual style is clean and architectural, utilizing generous white space to focus on the product's premium nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm9wO4FiMRBWKx-jcaUilI_QEF9GJLt-6Bw2uhQMhJav5CUyIyK9yQj6EPE2BylasZWkohQSMFJUoiig6XGOaM6OvavNBBZIYNuPbPozFLOti7bBVZZ_XyMx_Knf_TcqXLgL0frDo_dAdgtCcM6X7Q2ol4NJBzuSnAR5B_qVQ3yGMfEg6fEzaalPv93ukzcMjhEY2IiZ84wo9akBXI2XOipUf81_3qq7PunngyBRD4GP9CJ3kXPgMFYUgsETU_sxvsJZnXDS-HZwkX">
+<div class="absolute top-4 left-4 bg-on-surface text-white px-3 py-1 rounded-full text-[10px] font-bold">LIMITED</div>
+</div>
+<div class="px-2">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Gundam MG Ver.Ka</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-3">BANDAI HOBBY</p>
+<div class="flex items-center justify-between">
+<span class="font-price-display text-price-display text-primary">$95.50</span>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary">shopping_bag</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-[24px] overflow-hidden mb-6 bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A stylized anime collectible of a popular character in a casual pose, featuring soft textures and pastel accents. Shot with a long-tail shadow effect in a bright gallery environment. The overall aesthetic is approachable yet exclusive, consistent with a high-end digital boutique store." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBItSFes_qr3QsWmfJAHXtWjwTtG-jzhwcnb4LE8RfQaoh_0MfDHOgpFP54LVPb1D_wlW9tI_zUyRt03MxPepe08WjVEMGC8IbgFmQKE9gySWaa-yt1H911ETWSQbKlEZQiAl-2utJnQPGr71G_zlG_xqD-2DA1aulb0YuHCCf5_qfA-dwI60FeqcPlzAgsG4J916sjWb6vQg9npRUEjBJHRn_LNnd-eVkjlyisGgzizDJE18YvEIlwa1ZhZ_E-3t6JVoe31CaT1YG2">
+</div>
+<div class="px-2">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Rem Crystal Dress</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-3">ESTREAM</p>
+<div class="flex items-center justify-between">
+<span class="font-price-display text-price-display text-primary">$310.00</span>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary">shopping_bag</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Exclusivos Japón Section (Gallery Layout) -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-[1440px] mx-auto px-container-padding-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">IMPORTACIÓN DIRECTA</span>
+<h2 class="font-display-lg text-display-lg text-on-surface mb-8 leading-tight">Joyas de Akihabara en tu puerta</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                            Nuestra red exclusiva de proveedores en Tokio nos permite ofrecerte ediciones limitadas que rara vez salen de Japón. Autenticidad garantizada y empaque premium en cada envío.
+                        </p>
+<div class="space-y-6 mb-12">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">verified</span>
+<div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface">Certificado de Autenticidad</h4>
+<p class="text-on-surface-variant">Cada pieza incluye holograma oficial y registro de fabricante.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">flight_takeoff</span>
+<div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface">Envío Express Asegurado</h4>
+<p class="text-on-surface-variant">Logística especializada para figuras frágiles con rastreo global.</p>
+</div>
+</div>
+</div>
+<button class="bg-primary text-on-primary font-label-caps px-10 py-4 rounded-full hover:bg-on-primary-fixed-variant transition-all">EXPLORAR EXCLUSIVOS</button>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="grid grid-cols-2 gap-6">
+<div class="aspect-square rounded-[32px] overflow-hidden soft-shadow relative">
+<img class="w-full h-full object-cover" data-alt="A macro photography shot of an anime figure's face, showing extreme detail in the eyes and hair sculpt. Set in a bright, ethereal light-mode environment with soft focus in the background. The lighting highlights the exquisite paint application and premium material quality typical of high-end Japanese imports." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzOvF2HWF0fZYDHwCAQwuU_tifaqeWTHxpMqYbOM2LSOyyrfeXefcAtYJ8ZUDQF3tfW2qShBgfkr_WMIJcXX6Yyu6cXK4h-BgOd59Tpwhth1I3wLrnM7lL7ABywNKYsz5UldC8PIXdl6J_tektbu6AgHCt97GwO1JktivG-F9q7WKXQkev2oniZe45dLtODygav_1wozPX3aFbmaRxNIB4uVBYguFPXZGvZf1aVyEyY8BjLAxiM-nDx5sFA-4rGOJCo8Pyvk9m3buz">
+</div>
+<div class="aspect-square rounded-[32px] overflow-hidden translate-y-12 soft-shadow">
+<img class="w-full h-full object-cover" data-alt="A curated display of multiple premium anime figures in a minimalist white shelving unit. The lighting is soft and architectural, creating an approachable exclusivity mood. The composition emphasizes clean lines and generous spacing, reflecting a flagship digital boutique storefront for collectibles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQCnbKv9MTF_GY5c7_0iivS3DjGSSnCIgroonU0K7j0ZxlVSlA9gdUKn_AhQgzIIE9ra3HM8UbIpOgE1GEWFtM-a7c0bYuGmpJrPI6rPqXDp4pfEk6u7bWEPsQYaWO4cNXSqrlBoFQOMqFOoejjhIkkYc7dnVKnSO3ONedGeXE7Y6S4EAtNhW8jJZ-F9YyFrsmdUeu6fgtqrwfb2TOx09N5wvCXKxpSIWbIRA8vkAeW5-HyIXs5yaBjzCKAIXXCH3Z_RdIu-g6wFEk">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Próximos Lanzamientos (Timeline Grid) -->
+<section class="py-section-gap max-w-[1440px] mx-auto px-container-padding-desktop">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg text-on-surface">Próximos Lanzamientos</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">Asegura tu lugar en la historia. Reservas abiertas para 2024.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Preorder Item 1 -->
+<div class="flex flex-col gap-6 p-8 bg-surface-container-lowest rounded-[32px] border border-outline-variant/30 hover:border-primary/40 transition-colors group">
+<div class="flex justify-between items-center">
+<span class="bg-primary-container/10 text-primary px-4 py-1 rounded-full text-[12px] font-bold">OCTUBRE 2024</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">event</span>
+</div>
+<div class="aspect-video rounded-2xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-80" data-alt="A preview image of an upcoming anime statue release, featuring dynamic sculpting and bold energetic colors. The image is clean and professionally lit, set against a pristine white background. The mood is high-energy yet refined, focusing on the anticipation of a major collectors' launch." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEj9_r7Ur2fiRQBSSMf6CUc0LshqYXKT99L1o19stnueUYj80Cvc7LbcMkIqghChvn6r9wEW-JZBHGNidb7CbFiOeCMAYRycUSNVXA_8yaddBOqmdWgBbMBnBhvBEptunIYSWA5G7OSOH8WNA04OXa1TAJeQSf-clBWf5lnXGpnoSiauRHczCP3sOJKSirronvL2z7RncCltzJnPLXrScI-sLXfvWOlAubIT_x89QQRFMiHHlbBdiG5BNCUUZxAnc56oUDeRSzaZ8G">
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Albedo: Swimsuit Ver.</h3>
+<p class="text-on-surface-variant font-body-md">Una pieza maestra de 1/7 que redefine el concepto de elegancia en PVC.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="font-price-display text-price-display text-on-surface">$165.00</span>
+<button class="text-primary font-label-caps flex items-center gap-2 group-hover:gap-4 transition-all">PREVENTA <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+<!-- Preorder Item 2 -->
+<div class="flex flex-col gap-6 p-8 bg-surface-container-lowest rounded-[32px] border border-outline-variant/30 hover:border-primary/40 transition-colors group">
+<div class="flex justify-between items-center">
+<span class="bg-primary-container/10 text-primary px-4 py-1 rounded-full text-[12px] font-bold">DICIEMBRE 2024</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">event</span>
+</div>
+<div class="aspect-video rounded-2xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-80" data-alt="Detailed sculpt of a high-tech robotic figure with intricate mechanical parts and glowing orange accents. Set in a vast, minimalist gallery space with high-key lighting. The aesthetic is clean, sophisticated, and technologically advanced, appealing to high-end hobbyists and collectors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNnbUJ0gn-Yghuj18Tz3TSG0ra6vq4dyjYo0mWLhjEJITMTWl8owtLWsYiNh0CLWT4-wTPemsFX2FXaQ_snIav5wvBglLY9YWlCeES2Rzr-pRpmZjkEMRMw71huA9mNIAbKq8-yFSnEdgd550SFbIL--42eNNvfkVnD_5bRyxG6Xj1FsAQF-5i3ik_acDmZQtnP1vuuy7ZBkxokCjzPpflTJvqqvr7crQu0zQOBNZq-2Co5OXHAU-t9NLPv-1HH6a7clC8ImmNSUj2">
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Eva-01: Spear of Longinus</h3>
+<p class="text-on-surface-variant font-body-md">Réplica cinematográfica con efectos de iluminación LED integrados.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="font-price-display text-price-display text-on-surface">$420.00</span>
+<button class="text-primary font-label-caps flex items-center gap-2 group-hover:gap-4 transition-all">PREVENTA <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+<!-- Preorder Item 3 -->
+<div class="flex flex-col gap-6 p-8 bg-surface-container-lowest rounded-[32px] border border-outline-variant/30 hover:border-primary/40 transition-colors group">
+<div class="flex justify-between items-center">
+<span class="bg-primary-container/10 text-primary px-4 py-1 rounded-full text-[12px] font-bold">ENERO 2025</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">event</span>
+</div>
+<div class="aspect-video rounded-2xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-80" data-alt="A striking portrait of a stylized collectible figure featuring clean, bold aesthetics. Professional studio lighting with a focus on color accuracy and shadow depth. The setting is a minimalist light-mode gallery that creates a prestigious atmosphere for the upcoming product launch." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO8gErexouU6grovNrdt8ZzHRg7GBDylgY9OWCjnPO7C56HCtNMEwd8gOTCqOvofWPUhP-aB84iU9ZyUVTi6trtP6IoNmNWvhL0-mJdlIh-7qIuKoBuOwK3bquANhAS5oAGBhV5cXRWwzB-KPfqsHeDNsQBLbR4_N34kaizTkBcggCbcQS3RtgchglEQqbBI791pfjSS0E78s7PdzgLc9YxA5dtwICeEVWg5Mw2EbUAostvuECzoaTilwYeEI9XXk5QUznZ9UcWju-">
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Makima: Public Safety</h3>
+<p class="text-on-surface-variant font-body-md">Figura estática con base diorama detallada y acabados de lujo.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="font-price-display text-price-display text-on-surface">$210.00</span>
+<button class="text-primary font-label-caps flex items-center gap-2 group-hover:gap-4 transition-all">PREVENTA <span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Community CTA Section -->
+<section class="py-section-gap">
+<div class="max-w-[1440px] mx-auto px-container-padding-desktop">
+<div class="bg-on-surface text-white rounded-[48px] p-16 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="relative z-10 max-w-xl">
+<h2 class="font-display-lg text-display-lg mb-6">Únete a la elite del coleccionismo</h2>
+<p class="font-body-lg text-body-lg text-surface-variant/80 mb-8">Recibe acceso anticipado a preventas exclusivas, eventos VIP y descuentos de comunidad antes que nadie.</p>
+<div class="flex gap-4">
+<input class="bg-surface/10 border border-surface/20 rounded-full px-6 py-4 flex-1 focus:ring-2 focus:ring-primary-container outline-none transition-all placeholder:text-surface-variant/50" placeholder="Tu correo electrónico" type="email">
+<button class="bg-primary-container text-white px-8 py-4 rounded-full font-label-caps hover:bg-primary transition-all">SUSCRIBIRSE</button>
+</div>
+</div>
+<div class="relative z-10 hidden lg:block">
+<div class="w-64 h-64 border-2 border-primary-container/30 rounded-full flex items-center justify-center p-8">
+<div class="w-full h-full bg-primary-container rounded-full flex items-center justify-center text-center">
+<span class="font-label-caps leading-tight">MOTNEKI<br>INNER CIRCLE</span>
+</div>
+</div>
+</div>
+<!-- Aesthetic blur background -->
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary opacity-20 blur-[100px]"></div>
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary opacity-10 blur-[80px]"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant w-full py-20">
+<div class="max-w-[1440px] mx-auto px-container-padding-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start gap-16 mb-20">
+<div class="max-w-xs">
+<h2 class="font-display-lg text-headline-md font-bold text-on-surface mb-6">MotnekiStore</h2>
+<p class="font-body-md text-on-surface-variant">Elevando el arte del coleccionismo con piezas exclusivas y curaduría premium desde Japón para el mundo.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-on-surface font-bold">TIENDA</span>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Catálogo</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Preventas</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Novedades</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-on-surface font-bold">AYUDA</span>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Envíos</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">FAQ</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-on-surface font-bold">LEGAL</span>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Términos</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-outline-variant/30">
+<p class="font-body-sm text-on-surface-variant text-[14px]">© 2024 MotnekiStore. All rights reserved. Premium Anime Collectibles.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</div>
+</footer>
+<!-- FAB (Suppressed for Home screen clarity, but defined if needed for specific actions) -->
+<button class="fixed bottom-8 right-8 bg-primary-container text-on-primary w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</body></html>

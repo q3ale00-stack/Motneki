@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-primary-container": "#572000",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "success-teal": "#0062a1",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#ffb693",
+                    "surface-container-high": "#e8e8e8",
+                    "on-surface-variant": "#5a4136",
+                    "secondary-fixed": "#e2e2e2",
+                    "background": "#f9f9f9",
+                    "on-surface": "#1a1c1c",
+                    "secondary": "#5d5f5e",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#059eff",
+                    "tertiary-fixed": "#d0e4ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#9ccaff",
+                    "inverse-surface": "#2f3131",
+                    "primary-container": "#ff6b00",
+                    "primary": "#a04100",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#351000",
+                    "surface-dim": "#dadada",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed-variant": "#00497b",
+                    "outline-variant": "#e2bfb0",
+                    "surface": "#f9f9f9",
+                    "surface-variant": "#e2e2e2",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary-fixed": "#001d35",
+                    "on-background": "#1a1c1c",
+                    "on-primary-fixed-variant": "#7a3000",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-container": "#003357",
+                    "secondary-container": "#e2e2e2",
+                    "inverse-on-surface": "#f1f1f1",
+                    "tertiary": "#0062a1",
+                    "primary-fixed": "#ffdbcc",
+                    "inverse-primary": "#ffb693",
+                    "outline": "#8e7164",
+                    "surface-glass": "rgba(255, 255, 255, 0.7)",
+                    "outline-subtle": "#e2bfb0",
+                    "surface-tint": "#a04100",
+                    "on-secondary-container": "#636564"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding-mobile": "20px",
+                    "unit": "8px",
+                    "card-gap": "12px",
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "container-padding-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "label-badge": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "price-display": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-badge": ["10px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "price-display": ["20px", {"lineHeight": "1.0", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .product-card-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 glass-nav border-b border-white/10 shadow-xl shadow-primary-container/5">
+<div class="flex justify-between items-center px-6 md:px-16 py-4 max-w-[1440px] mx-auto">
+<a class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary-container" href="#">MotnekiStore</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Inicio</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Catálogo</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Preventas</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Exclusivos Japón</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Comunidad</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center text-primary-container border-b-2 border-primary-container pb-1 transition-transform scale-95 active:scale-90">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-on-surface/70 hover:text-on-surface transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="text-on-surface/70 hover:text-on-surface transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="relative text-on-surface/70 hover:text-on-surface transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary-container text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1440px] mx-auto px-6 md:px-16 py-12">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<nav class="flex items-center gap-2 mb-4 text-on-surface-variant/60 font-label-caps text-[10px] uppercase">
+<a class="hover:text-primary transition-colors" href="#">Tienda</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-on-surface-variant">Búsqueda</span>
+</nav>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2">Resultados para: <span class="text-primary-container italic">"Evangelion"</span></h1>
+<p class="font-body-md text-on-surface-variant">Hemos encontrado <span class="font-bold text-on-surface">24 artículos</span> exclusivos para tu colección.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant hidden md:block">Ordenar por:</span>
+<div class="relative inline-block w-48">
+<select class="appearance-none w-full bg-surface-container-low border-none rounded-full py-3 px-6 font-label-caps text-label-caps text-on-surface-variant focus:ring-2 focus:ring-primary-container/20 cursor-pointer">
+<option>Relevancia</option>
+<option>Menor Precio</option>
+<option>Mayor Precio</option>
+<option>Novedades</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-col md:flex-row gap-12">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 flex-shrink-0 space-y-10">
+<!-- Filter Group -->
+<div>
+<h3 class="font-label-caps text-label-caps mb-6 text-on-surface flex items-center justify-between">
+                        Categoría
+                        <span class="material-symbols-outlined text-sm">remove</span>
+</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-outline-subtle text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Scale Figures (12)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-subtle text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Nendoroid (8)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-subtle text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Model Kits (4)</span>
+</label>
+</div>
+</div>
+<!-- Filter Group -->
+<div>
+<h3 class="font-label-caps text-label-caps mb-6 text-on-surface flex items-center justify-between">
+                        Marca
+                        <span class="material-symbols-outlined text-sm">add</span>
+</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-subtle text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Good Smile Company</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-subtle text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Alter</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-subtle text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Kotobukiya</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<h3 class="font-label-caps text-label-caps mb-6 text-on-surface">Rango de Precio</h3>
+<div class="space-y-4">
+<div class="h-1 bg-surface-container-highest rounded-full relative">
+<div class="absolute inset-y-0 left-1/4 right-1/4 bg-primary-container rounded-full"></div>
+<div class="absolute w-4 h-4 bg-white border-2 border-primary-container rounded-full -top-1.5 left-1/4 shadow-sm"></div>
+<div class="absolute w-4 h-4 bg-white border-2 border-primary-container rounded-full -top-1.5 right-1/4 shadow-sm"></div>
+</div>
+<div class="flex justify-between items-center text-label-badge text-on-surface-variant">
+<span>S/ 200</span>
+<span>S/ 1,500</span>
+</div>
+</div>
+</div>
+<!-- Availability -->
+<div>
+<h3 class="font-label-caps text-label-caps mb-6 text-on-surface">Disponibilidad</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 border-outline-subtle text-primary-container focus:ring-primary-container" name="availability" type="radio"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Todos</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-outline-subtle text-primary-container focus:ring-primary-container" name="availability" type="radio"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">En Stock</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-outline-subtle text-primary-container focus:ring-primary-container" name="availability" type="radio"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Preventa</span>
+</label>
+</div>
+</div>
+<button class="w-full py-4 rounded-full border border-outline text-on-surface font-label-caps text-label-caps hover:bg-surface-container-low transition-colors">Limpiar Filtros</button>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative bg-surface-container-low rounded-lg aspect-[3/4] overflow-hidden mb-4 product-card-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A premium 1/7 scale high-end anime figure of Asuka Langley from Evangelion. The figure is posed dynamically on a detailed technical base with red mechanical elements. The photography is clean, studio-lit with soft shadows and a pristine white background, showcasing the vibrant orange and deep red details of the plugsuit. Minimalist luxury aesthetic with sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnLwPk1F7u57SxvslfFuNWph6_Evd9Uulsjl2zmawBW8xvfkuhTW3nDmbNDXCTMuSWh38e-FsdbW_asDtEHPg3aNAaXZ4xqp-OjbqcwxNYGEI7_meW5eSUxLsb0ad7yhi2968gPSstiuHZFXrsnlZQXUDurVSKhN2DGB974L4-nui-7QFjul0pKl5rX0V0VaOZby2cDx2xLkRXY3oAYEE4fuYewgcSEQXk3R-apg5wtoHuSjM50Fm4vdlUl7MTn1dpuhiXMOLBI_v9"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary-container text-white font-label-badge text-label-badge px-3 py-1.5 rounded-full uppercase tracking-widest">En Stock</span>
+</div>
+<button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="space-y-1 px-1">
+<p class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase">Alter</p>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary-container transition-colors line-clamp-2">Asuka Langley Shikinami - Jersey Ver. 1/7 Scale</h3>
+<p class="font-price-display text-primary pt-2">S/ 849.00</p>
+<button class="mt-4 w-full bg-primary-container text-white py-3 rounded-full font-label-caps text-label-caps flex items-center justify-center gap-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+                                AGREGAR AL CARRITO
+                            </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative bg-surface-container-low rounded-lg aspect-[3/4] overflow-hidden mb-4 product-card-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Detailed anime figure of Rei Ayanami in her white plugsuit sitting on a minimalist crystalline base. High-key gallery lighting creates a sophisticated atmosphere. The color palette is dominated by pure whites, soft blues, and metallic silver accents, reflecting the minimalist luxury store aesthetic. 1/7 scale figure photography with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2JrlOiefeoATpml8m2MS_tuCpfz0BtjLCUb_wBmbj566QlSm_Z81406x6i1rtSLqkiR_bHqLFWIjJCpqSiXoEWjaMokrtpFR1IdbLNevUayb-I8TqL1nR6f9tziCXE2A4OprkJM9w0XfzZPTx_Wyd2Suz7IeJr2i7Om4_eVkZlIFmYj6fa_QDa1niUqViQ1PU_VpWWHQzh7_bk9Wtg8zV4EReaFr7YboZJWfhFs2C3c5TmQOC4qwjtxeq8FGHtOyqIcsmOCPOFwds"/>
+<div class="absolute top-4 left-4">
+<span class="bg-on-surface text-white font-label-badge text-label-badge px-3 py-1.5 rounded-full uppercase tracking-widest">Preventa</span>
+</div>
+<button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="space-y-1 px-1">
+<p class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase">Good Smile Company</p>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary-container transition-colors line-clamp-2">Rei Ayanami [Voyage of the Soul] 1/7 Scale</h3>
+<p class="font-price-display text-primary pt-2">S/ 720.00</p>
+<button class="mt-4 w-full bg-primary-container text-white py-3 rounded-full font-label-caps text-label-caps flex items-center justify-center gap-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+                                AGREGAR AL CARRITO
+                            </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative bg-surface-container-low rounded-lg aspect-[3/4] overflow-hidden mb-4 product-card-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional product shot of an Evangelion Unit-01 Test Type model kit. The robot is shown in a crouched, aggressive stance with neon green highlights glowing against a dark purple metallic finish. The background is a soft, warm neutral grey to emphasize the figure's vibrant colors. Minimalist lighting setup for a high-end collector look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA66mZwFjpD7vPMXpOoR8oMP1Ly76KqrrhtGI4oIjISJxJvJ8-WKUD70LFo9jJyZ7LWRTVCv74UV6m2ZcdHRQlilPOiMq9LgOr8SFEPbS1zE2U8t89ZUbcrOP5xR8r4wcZlEeeSmiPuRylkBqu-mxAoxi1jk5FQwwU3ZCHO6BzEfUMQIN9FsqKlRSRVndkDd-_KvskEKcQ7AvIawc5ssTO8eDWWE-74JOI9qwHzyBbYafVfD-f8aIGpDVEFG5ips5wfdKBTd9LYBD7J"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary-container text-white font-label-badge text-label-badge px-3 py-1.5 rounded-full uppercase tracking-widest">En Stock</span>
+</div>
+<button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="space-y-1 px-1">
+<p class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase">Kotobukiya</p>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary-container transition-colors line-clamp-2">EVA Unit-01 Test Type TV Ver.</h3>
+<p class="font-price-display text-primary pt-2">S/ 450.00</p>
+<button class="mt-4 w-full bg-primary-container text-white py-3 rounded-full font-label-caps text-label-caps flex items-center justify-center gap-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+                                AGREGAR AL CARRITO
+                            </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative bg-surface-container-low rounded-lg aspect-[3/4] overflow-hidden mb-4 product-card-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detailed closeup of a Mari Illustrious Makinami scale figure in a vibrant pink plugsuit. The figure captures a sophisticated, playful expression. The setting is a bright gallery-style space with ambient lighting and subtle orange accent glows. High resolution photography focusing on the meticulous paintwork and sculptural elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrkLklpvBn8UnmPPFO_6J9-FVWgffcXIz8lZ6V3SE25azq5q0DR0P_-tdaByC_Y8KY8Zi6OYCr50D0K-Jw16aSw7MM_ORj9AWd0Pd9ty6oe9w6lrIqm-odSsOd0ona6mGsNK9y2MURd2lG5cDiJ__7RB_DPV6I8QeMVxtaUYa6NIgV-C1rNYWSa7qhAewQC5IBPukOEEML1GtyoWBjGQ5WauvGPzJwZELf1OhjcN0SpxiS2NMybjhQWZTlGwZKhmmNtWnWOCFMLTKk"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary-container text-white font-label-badge text-label-badge px-3 py-1.5 rounded-full uppercase tracking-widest">En Stock</span>
+</div>
+<button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="space-y-1 px-1">
+<p class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase">Max Factory</p>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary-container transition-colors line-clamp-2">Mari Illustrious Makinami - Plugsuit Ver.</h3>
+<p class="font-price-display text-primary pt-2">S/ 615.00</p>
+<button class="mt-4 w-full bg-primary-container text-white py-3 rounded-full font-label-caps text-label-caps flex items-center justify-center gap-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+                                AGREGAR AL CARRITO
+                            </button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group cursor-pointer">
+<div class="relative bg-surface-container-low rounded-lg aspect-[3/4] overflow-hidden mb-4 product-card-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A group of Nendoroid figures from Evangelion including Shinji and Kaworu. The figures are displayed on a white shelf with warm orange backlighting. Soft studio light highlights the cute, chibi aesthetic and colorful hair. The composition is clean and minimalist, evoking a boutique shop display feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3L3lKsCYXtr8cByogWixI8SWNm6SL4ZDZEpdUOhI7n_VVhvG5OCJwC7JeuiGch8p6l07KizKu1lTUslktKzRrBTrSyymwz-Y9S9YN8swVCvJRxzMGREYPOZxz9kBd40bn6UukUWiE9vfQ6jyuoiN8RrOEEa87OhwA-1BDAPHbth21fmHS41x5cBC4Ctk4lPzWuZb5PtMdUB4n1JDdYlsEUK_ENJD7gLyZLdEj4zDkE8rRZkGjYpNqYc702whHQLgmI2f0k4AnNPbg"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary-container text-white font-label-badge text-label-badge px-3 py-1.5 rounded-full uppercase tracking-widest">En Stock</span>
+</div>
+<button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="space-y-1 px-1">
+<p class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase">Good Smile Company</p>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary-container transition-colors line-clamp-2">Nendoroid Shinji Ikari - Plugsuit Ver.</h3>
+<p class="font-price-display text-primary pt-2">S/ 245.00</p>
+<button class="mt-4 w-full bg-primary-container text-white py-3 rounded-full font-label-caps text-label-caps flex items-center justify-center gap-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+                                AGREGAR AL CARRITO
+                            </button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group cursor-pointer">
+<div class="relative bg-surface-container-low rounded-lg aspect-[3/4] overflow-hidden mb-4 product-card-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High-end collectible statue of Kaworu Nagisa standing on a ruined moon surface. Elegant, ethereal lighting with soft blue and white tones. The figure is masterfully crafted, showcasing flowing hair and detailed fabric textures. Luxury museum-style presentation against a clean, modern architectural background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjc79VRreHLrb6VP1YfrR49JAUiULOtXAIJqQBrcTQKFWEIIyUDaDeOj-YdDFVYrh9EgMOaiMFORiNuKhv9qcmah-BnTy6TFgsdgLsWvO1MDjbIZfvtSTWRMuGRr6uV-dX6UIMZIsXlQg-vh7faZHcKhlwT0phMy21vJFmzTU_91PY-2A9v1-XCXf8_iZnI_S4WcIk6mt_p4JvsZSk-cJUMt4o8otts9Tyfcr_nOiIe3PvbGv9BD8obWEyknI5cg73xcB9a60qmumM"/>
+<div class="absolute top-4 left-4">
+<span class="bg-on-surface text-white font-label-badge text-label-badge px-3 py-1.5 rounded-full uppercase tracking-widest">Preventa</span>
+</div>
+<button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="space-y-1 px-1">
+<p class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase">Prime 1 Studio</p>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary-container transition-colors line-clamp-2">Kaworu Nagisa - Moon Base Ver. 1/6 Scale</h3>
+<p class="font-price-display text-primary pt-2">S/ 1,450.00</p>
+<button class="mt-4 w-full bg-primary-container text-white py-3 rounded-full font-label-caps text-label-caps flex items-center justify-center gap-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+                                AGREGAR AL CARRITO
+                            </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-2">
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-subtle text-on-surface-variant hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-primary-container text-white font-bold">1</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-low transition-colors">2</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-low transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-low transition-colors">8</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-subtle text-on-surface-variant hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-16 px-6 md:px-16 border-t border-outline-variant/20 mt-32">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1440px] mx-auto">
+<div class="space-y-6">
+<a class="font-display-lg text-headline-md font-bold text-on-surface" href="#">MotnekiStore</a>
+<p class="font-body-md text-on-surface-variant max-w-xs">Ofreciendo lo mejor del coleccionismo japonés de alta gama en Perú con servicio personalizado.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-on-surface">Servicios</h4>
+<ul class="space-y-2">
+<li><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-all" href="#">WhatsApp Business</a></li>
+<li><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-all" href="#">Envíos</a></li>
+<li><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-all" href="#">Importación Japón</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-on-surface">Ayuda</h4>
+<ul class="space-y-2">
+<li><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-all" href="#">Términos</a></li>
+<li><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-all" href="#">FAQ</a></li>
+<li><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-all" href="#">Contacto</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps text-on-surface">Newsletter</h4>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-full py-3 px-6 pr-12 focus:ring-2 focus:ring-primary-container/20" placeholder="Tu email" type="email"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-primary-container text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary-container hover:text-white transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary-container hover:text-white transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-outline-variant/10 text-center">
+<p class="font-body-md text-[12px] text-on-surface-variant">© 2024 MotnekiStore. Definitive Anime Luxury &amp; High-End Collectibles.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions and simple state handling
+        document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(input => {
+            input.addEventListener('change', () => {
+                // Future: Add AJAX filter logic
+                console.log('Filter changed:', input.nextElementSibling.textContent);
+            });
+        });
+
+        // Simple cart counter mock update
+        document.querySelectorAll('button').forEach(btn => {
+            if(btn.innerText.includes('AGREGAR')) {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const counter = document.querySelector('.relative .bg-primary-container');
+                    let count = parseInt(counter.innerText);
+                    counter.innerText = count + 1;
+                    
+                    // Small visual feedback
+                    btn.innerText = 'AÑADIDO ✓';
+                    btn.classList.replace('bg-primary-container', 'bg-success-teal');
+                    setTimeout(() => {
+                        btn.innerHTML = '<span class="material-symbols-outlined text-sm">shopping_bag</span>AGREGAR AL CARRITO';
+                        btn.classList.replace('bg-success-teal', 'bg-primary-container');
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+</body></html>

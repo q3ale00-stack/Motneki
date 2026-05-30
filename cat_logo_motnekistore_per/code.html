@@ -1,0 +1,177 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scale-98-on-click:active {
+            transform: scale(0.98);
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#261812",
+                        "on-secondary-container": "#636262",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#f8ddd2",
+                        "primary": "#a33e00",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#ff6600",
+                        "outline-variant": "#e3bfb1",
+                        "surface-tint": "#a33e00",
+                        "inverse-surface": "#3d2d26",
+                        "surface-container-low": "#fff1ec",
+                        "outline": "#8e7164",
+                        "surface": "#fff8f6",
+                        "secondary": "#5f5e5e",
+                        "background": "#fff8f6",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "on-primary-fixed": "#360f00",
+                        "tertiary-container": "#009cfc",
+                        "on-primary-container": "#561d00",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e2dfde",
+                        "surface-bright": "#fff8f6",
+                        "tertiary-fixed": "#d0e4ff",
+                        "on-surface-variant": "#5a4136",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "inverse-primary": "#ffb596",
+                        "surface-container-high": "#fee2d8",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-dim": "#f0d4ca",
+                        "primary-fixed-dim": "#ffb596",
+                        "on-tertiary-fixed": "#001d35",
+                        "primary-fixed": "#ffdbcd",
+                        "on-tertiary-container": "#003155",
+                        "inverse-on-surface": "#ffede7",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container": "#ffe9e1",
+                        "on-surface": "#261812",
+                        "tertiary": "#0062a1",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#f8ddd2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "xl": "40px",
+                        "gutter": "12px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "price": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "h1": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h2": ["20px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "label-bold": ["11px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "price": ["18px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-[#F5F5F5] font-body-md text-on-surface" data-mode="connect">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-6 py-3 sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-orange-600 tracking-tighter font-h1">MotnekiStore</span>
+<nav class="hidden lg:flex items-center gap-6"><a class="text-orange-600 font-bold border-b-2 border-orange-600 pb-1 font-body-sm tracking-tight" href="#">Novedades</a><a class="text-neutral-600 hover:text-orange-600 font-body-sm tracking-tight transition-all duration-200" href="#">Preventas</a><a class="text-neutral-600 hover:text-orange-600 font-body-sm tracking-tight transition-all duration-200" href="#">Exclusivos</a><a class="text-neutral-600 hover:text-orange-600 font-body-sm tracking-tight transition-all duration-200" href="#">Figuras a Escala</a><a class="text-neutral-600 hover:text-orange-600 font-body-sm tracking-tight transition-all duration-200" href="#">Nendoroids</a></nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<input class="bg-neutral-50 border border-neutral-200 rounded px-4 py-1.5 text-sm w-64 focus:outline-none focus:border-orange-600" placeholder="Buscar figuras..." type="text">
+<span class="material-symbols-outlined absolute right-3 top-1.5 text-neutral-400 text-sm">search</span>
+</div>
+<button class="material-symbols-outlined text-neutral-700 hover:bg-neutral-50 p-2 rounded transition-all scale-98-on-click" data-icon="person">person</button>
+<button class="material-symbols-outlined text-neutral-700 hover:bg-neutral-50 p-2 rounded transition-all scale-98-on-click" data-icon="shopping_cart">shopping_cart</button>
+</div>
+</header>
+<div class="flex max-w-[1440px] mx-auto min-h-screen">
+<!-- Sidebar Navigation (Filters) -->
+<aside class="w-64 flex-shrink-0 bg-white border-r border-neutral-200 hidden md:flex flex-col p-6 sticky top-[60px] h-[calc(100vh-60px)] overflow-y-auto"><div class="mb-8"><h3 class="font-h2 text-body-sm uppercase tracking-widest text-neutral-400 mb-4">Categorías</h3><div class="space-y-1"><button class="flex items-center gap-3 bg-neutral-100 text-orange-600 rounded-sm px-4 py-3 w-full text-left font-body-md font-medium"><span class="material-symbols-outlined">grid_view</span> Catálogo</button><button class="flex items-center gap-3 text-neutral-600 hover:bg-neutral-50 px-4 py-3 w-full text-left font-body-md font-medium transition-colors"><span class="material-symbols-outlined">toys</span> Modelismo</button><button class="flex items-center gap-3 text-neutral-600 hover:bg-neutral-50 px-4 py-3 w-full text-left font-body-md font-medium transition-colors"><span class="material-symbols-outlined">apparel</span> Accesorios</button></div></div><div class="mb-8"><h3 class="font-h2 text-body-sm uppercase tracking-widest text-neutral-400 mb-4">Disponibilidad</h3><div class="space-y-3 px-2"><label class="flex items-center gap-3 cursor-pointer"><input checked="" class="w-4 h-4 rounded border-neutral-300 text-orange-600 focus:ring-orange-500" type="checkbox"><span class="text-body-md text-neutral-700">En stock</span></label><label class="flex items-center gap-3 cursor-pointer"><input class="w-4 h-4 rounded border-neutral-300 text-orange-600 focus:ring-orange-500" type="checkbox"><span class="text-body-md text-neutral-700">Preventa</span></label><label class="flex items-center gap-3 cursor-pointer"><input class="w-4 h-4 rounded border-neutral-300 text-orange-600 focus:ring-orange-500" type="checkbox"><span class="text-body-md text-neutral-700">Agotado</span></label></div></div><div class="mb-8"><h3 class="font-h2 text-body-sm uppercase tracking-widest text-neutral-400 mb-4">Series Populares</h3><div class="space-y-2 px-2 max-h-48 overflow-y-auto pr-2"><button class="block w-full text-left text-body-md text-neutral-600 hover:text-orange-600 py-1 transition-colors">Genshin Impact</button><button class="block w-full text-left text-body-md text-neutral-600 hover:text-orange-600 py-1 transition-colors">Chainsaw Man</button><button class="block w-full text-left text-body-md text-neutral-600 hover:text-orange-600 py-1 transition-colors">Hololive Production</button><button class="block w-full text-left text-body-md text-neutral-600 hover:text-orange-600 py-1 transition-colors">Jujutsu Kaisen</button><button class="block w-full text-left text-body-md text-neutral-600 hover:text-orange-600 py-1 transition-colors">Spy x Family</button></div></div><button class="mt-auto bg-primary text-white font-label-bold py-3 px-4 rounded-sm flex items-center justify-center gap-2 scale-98-on-click transition-transform shadow-sm"><span class="material-symbols-outlined text-sm">edit_note</span> Solicitar Figura Personalizada</button></aside>
+<!-- Main Content Area -->
+<main class="flex-1 p-6 md:p-10">
+<!-- Breadcrumbs and Header -->
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6"><div class=""><div class="flex items-center gap-2 text-neutral-500 font-body-sm mb-2"><span>Inicio</span><span class="material-symbols-outlined text-xs">chevron_right</span><span class="text-neutral-900 font-medium">Catálogo</span></div><h1 class="font-display text-display text-on-background">Catálogo de Productos</h1><p class="text-on-secondary-container mt-1 font-body-md">Mostrando 1,240 artículos desde Akihabara</p></div><div class="flex items-center gap-4"><div class="flex items-center gap-2 bg-white border border-neutral-200 px-3 py-2 rounded-sm"><span class="text-body-sm text-neutral-500">Ordenar por:</span><select class="bg-transparent border-none text-body-md font-medium text-on-background focus:ring-0 cursor-pointer p-0"><option>Novedades</option><option>Precio: Menor a Mayor</option><option>Precio: Mayor a Menor</option><option>Fecha de Lanzamiento</option></select></div><button class="flex items-center justify-center w-10 h-10 bg-white border border-neutral-200 rounded-sm hover:bg-neutral-50 transition-colors"><span class="material-symbols-outlined text-neutral-700">filter_list</span></button></div></div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-white border border-neutral-200 rounded-sm overflow-hidden hover:border-orange-200 transition-all duration-300"><div class="relative aspect-[4/5] bg-neutral-100 overflow-hidden"><img alt="Figura de Anime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://i.ebayimg.com/images/g/5oAAAeSwWxpqCE1h/s-l1600.webp"><div class="absolute top-2 left-2 flex flex-col gap-1"><span class="bg-primary text-white text-label-bold px-2 py-1 rounded-sm uppercase tracking-wider">Preventa</span><span class="bg-amber-400 text-black text-label-bold px-2 py-1 rounded-sm uppercase tracking-wider">Exclusivo</span></div><button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-neutral-400 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100"><span class="material-symbols-outlined text-lg">favorite</span></button></div><div class="p-3"><p class="text-body-sm text-neutral-400 mb-1">Good Smile Company</p><h3 class="text-body-md font-bold text-on-background line-clamp-2 min-h-[42px] mb-2"><p class="MsoNormal"><span lang="EN-US" style="font-size:10.0pt;line-height:107%;
+mso-ansi-language:EN-US" class="">Bandai Figuarts Zero One Piece Kaido of the Beasts<o:p></o:p></span></p></h3><p class="text-body-sm text-neutral-500 mb-3">One piece</p><div class="flex items-center justify-between"><span class="text-price font-price text-orange-600">S/. 620.00</span><div class="w-1/3 bg-neutral-100 h-1 rounded-full overflow-hidden"><div class="bg-orange-600 h-full w-[85%]"></div></div></div><p class="text-[10px] text-neutral-400 mt-1 text-right">85% Reservado</p></div></div>
+<!-- Product Card 2 -->
+<div class="group bg-white border border-neutral-200 rounded-sm overflow-hidden hover:border-orange-200 transition-all duration-300"><div class="relative aspect-[4/5] bg-neutral-100 overflow-hidden"><img alt="Figura de Anime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://nerdvana.club/wp-content/uploads/2025/11/SF1964-600x600.png"><div class="absolute top-2 left-2"><span class="bg-blue-600 text-white text-label-bold px-2 py-1 rounded-sm uppercase tracking-wider">En Stock</span></div></div><div class="p-3"><p class="text-body-sm text-neutral-400 mb-1">Max Factory</p><h3 class="text-body-md font-bold text-on-background line-clamp-2 min-h-[42px] mb-2"><p class="MsoNormal"><span lang="EN-US" style="font-size:10.0pt;line-height:107%;
+mso-ansi-language:EN-US" class="">Ichiban Kuji – ONE PIECE –&nbsp; Charlotte Pudding<o:p></o:p></span></p></h3><h1 class="product_title entry-title" style="--theme-font-family: 'Exo 2', Sans-Serif; --theme-font-weight: 700; --theme-font-size: 30px; --theme-line-height: 1.5; margin: 0px 0px 10px; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-alternates: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-weight: 700; font-stretch: inherit; font-size: 30px; line-height: 1.5; font-family: &quot;Exo 2&quot;, sans-serif; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-language-override: inherit; color: rgb(40, 41, 42); margin-block-end: 19px; background-color: rgb(244, 244, 244);"><p class="MsoNormal"></p><p class="MsoNormal"><br></p><p></p></h1><p class="text-body-sm text-neutral-500 mb-3">One Piece</p><div class=""><br></div><p></p><div class="flex items-center justify-between"><span class="text-price font-price text-orange-600">S/. 120.00</span></div></div></div>
+<!-- Product Card 3 -->
+<div class="group bg-white border border-neutral-200 rounded-sm overflow-hidden hover:border-orange-200 transition-all duration-300"><div class="relative aspect-[4/5] bg-neutral-100 overflow-hidden"><img alt="Figura de Anime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYeRxHViKuLKN1lv-5tkd9E7VdUSR2LX5PvXko7gN5dN6ti_4OLD490wtIjjzZFn0_ZT32f_DOFHjffEpVsmGha5N35Xk117YfvU8n14v9Q5AMtVKrIc6i-tglA6aVQzLiZOOuV0hYby9WG6cU9C5tTmEuWAfPU6L1NAsumjJ2h7DKrRY3osgEb22KGtLYJE1SK8S54jzX2Bd-PHlvBqolsoynOEoSK8FDTJBRMhrgyK4t-ZvUlqbY7N8uBDBw_eIJGCKRSnvBdU9r"><div class="absolute top-2 left-2"><span class="bg-neutral-400 text-white text-label-bold px-2 py-1 rounded-sm uppercase tracking-wider">Agotado</span></div></div><div class="p-3"><p class="text-body-sm text-neutral-400 mb-1">Bandai Spirits</p><h3 class="text-body-md font-bold text-on-background line-clamp-2 min-h-[42px] mb-2">RG 1/144 MSN-04 FF Sazabi</h3><p class="text-body-sm text-neutral-500 mb-3">Mobile Suit Gundam</p><div class="flex items-center justify-between"><span class="text-price font-price text-neutral-400">S/. 210.00</span></div></div></div>
+<!-- Product Card 4 -->
+<div class="group bg-white border border-neutral-200 rounded-sm overflow-hidden hover:border-orange-200 transition-all duration-300"><div class="relative aspect-[4/5] bg-neutral-100 overflow-hidden"><img alt="Figura de Anime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhmapr-PlOsJF7hQOv8gZuG1tkaiIncOb2NBFb3lRlHC73JggnuJ9NWj5DBylkyXQylSC5x4FYJWGJmxnt0yfOHI1Rfayyf2mUEZTmLU3cslCD2c2FyCYcCTK_R5HSlDMtq0FlI6RQZ2tzLc5hASEMNyR8TOuZKtG2xvVYLsogqwXZ94sdL5iL1-l8w4IHrhd0nwBvxuyMTaI-EGlOyPShobAc3_i3R3y21TmxcXoalapNaIDworVXxoBaR2nfxmloOO-i3TmjQ85k"><div class="absolute top-2 left-2"><span class="bg-primary text-white text-label-bold px-2 py-1 rounded-sm uppercase tracking-wider">Preventa</span></div></div><div class="p-3"><p class="text-body-sm text-neutral-400 mb-1">Moneki Originals</p><h3 class="text-body-md font-bold text-on-background line-clamp-2 min-h-[42px] mb-2">Akihabara Night: Acrylic Diorama Set</h3><p class="text-body-sm text-neutral-500 mb-3">Artículos Originales</p><div class="flex items-center justify-between"><span class="text-price font-price text-orange-600">S/. 80.00</span><div class="w-1/3 bg-neutral-100 h-1 rounded-full overflow-hidden"><div class="bg-orange-600 h-full w-[30%]"></div></div></div><p class="text-[10px] text-neutral-400 mt-1 text-right">30% Reservado</p></div></div>
+<!-- Product Card 5 -->
+<div class="group bg-white border border-neutral-200 rounded-sm overflow-hidden hover:border-orange-200 transition-all duration-300"><div class="relative aspect-[4/5] bg-neutral-100 overflow-hidden"><img alt="Figura de Anime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-9A75037mavcWrHCcYo7LFlDf8oPH84sXuG8DO4rhwXnlD__iOkLzLSMkU7DQuVfrfl4Bw70og0ljM8meWcktwD6pGLD2Lu71DmJFKcXUVnwjZ-Ps0jjBMIbzl_B971KuyR8VaNYmo3Wx_Aq62TphphYSk1g2QsngJB64MXIZCD8e3tKiy9p_jOfhXOFoxrva31CsADebqbhfN5SX0uskOQ9mKHcRtB7NtFlNn3iDhSMxzYPeKautc1K9E7F1tK8VFUeRc7TObfrs"><div class="absolute top-2 left-2"><span class="bg-blue-600 text-white text-label-bold px-2 py-1 rounded-sm uppercase tracking-wider">En Stock</span></div></div><div class="p-3"><p class="text-body-sm text-neutral-400 mb-1">Kotobukiya</p><h3 class="text-body-md font-bold text-on-background line-clamp-2 min-h-[42px] mb-2">Artfx J: Yuzuriha 1/8 Scale Figure</h3><p class="text-body-sm text-neutral-500 mb-3">Hell's Paradise</p><div class="flex items-center justify-between"><span class="text-price font-price text-orange-600">S/. 465.00</span></div></div></div>
+<!-- Repeat elements for grid density... -->
+<div class="group bg-white border border-neutral-200 rounded-sm overflow-hidden hover:border-orange-200 transition-all duration-300"><div class="relative aspect-[4/5] bg-neutral-100 overflow-hidden"><img alt="Figura de Anime" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXblVNuiR_QEwkPNAbL3LCDBnUDpsmhHBfDYUsbAG8NXiSu9yRto-U_lOZs9BACBgTXWnlFkM_HMdwUsdaKcuJnX3ZaoB8vMgXfPSbgO0P_sPGnHsOZMUJDhUwSq5n2rIGhm5i1XKmfl5xvCWeaexizkHV3j4_hkTqMjsfDA7O_6BfatK8jebgdJuaJh2UerIifFoxY5RXe6BUUqR_eVh9_zMtsTV5kC3Dj7iWjm13rhR_57PsgF4S4SO_lLiD1ymW-9TnvjG7OZLQ"></div><div class="p-3"><p class="text-body-sm text-neutral-400 mb-1">Prime 1 Studio</p><h3 class="text-body-md font-bold text-on-background line-clamp-2 min-h-[42px] mb-2">Guts: Berserker Armor Unleash Edition</h3><p class="text-body-sm text-neutral-500 mb-3">Berserk</p><div class="flex items-center justify-between"><span class="text-price font-price text-orange-600">S/. 3,550.00</span></div></div></div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex items-center justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center border border-neutral-200 rounded-sm text-neutral-400 hover:bg-neutral-50">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center border border-orange-600 bg-orange-600 text-white rounded-sm font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center border border-neutral-200 rounded-sm text-neutral-700 hover:bg-neutral-50">2</button>
+<button class="w-10 h-10 flex items-center justify-center border border-neutral-200 rounded-sm text-neutral-700 hover:bg-neutral-50">3</button>
+<span class="px-2 text-neutral-400">...</span>
+<button class="w-10 h-10 flex items-center justify-center border border-neutral-200 rounded-sm text-neutral-700 hover:bg-neutral-50">12</button>
+<button class="w-10 h-10 flex items-center justify-center border border-neutral-200 rounded-sm text-neutral-400 hover:bg-neutral-50">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-neutral-50 border-t border-neutral-200 mt-20">
+<div class="w-full max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12"><div><span class="text-xl font-black text-neutral-400 font-h1 mb-6 block">MotnekiStore</span><p class="text-xs uppercase tracking-widest text-neutral-500 font-body-sm leading-relaxed">© 2024 Moneki Store. Lima, Perú. Todos los derechos reservados.</p></div><div><h4 class="font-h2 text-sm font-bold text-neutral-900 mb-4">Atención al Cliente</h4><ul class="space-y-2"><li><a class="text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Información de Envío</a></li><li><a class="text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Devoluciones y Cambios</a></li><li><a class="text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Contactar Soporte para Coleccionistas</a></li></ul></div><div><h4 class="font-h2 text-sm font-bold text-neutral-900 mb-4">Guía del Coleccionista</h4><ul class="space-y-2"><li><a class="text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Guía de Especificaciones Técnicas</a></li><li><a class="text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Garantía de Autenticidad</a></li></ul></div><div><h4 class="font-h2 text-sm font-bold text-neutral-900 mb-4">Únete a la Comunidad</h4><div class="flex gap-4 mb-4"><span class="material-symbols-outlined text-neutral-400 hover:text-orange-600 cursor-pointer">share</span><span class="material-symbols-outlined text-neutral-400 hover:text-orange-600 cursor-pointer">podcasts</span><span class="material-symbols-outlined text-neutral-400 hover:text-orange-600 cursor-pointer">video_library</span></div><div class="relative mt-4"><input class="bg-white border border-neutral-200 rounded-sm px-4 py-2 text-xs w-full focus:outline-none focus:border-orange-600" placeholder="Boletín del Coleccionista" type="email"></div></div></div>
+</footer>
+</body></html>

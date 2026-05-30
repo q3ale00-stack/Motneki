@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scale-98-on-click:active {
+            transform: scale(0.98);
+        }
+        /* Custom scrollbar for dense retail feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e3bfb1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8e7164;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary-fixed": "#d0e4ff",
+                        "surface-tint": "#a33e00",
+                        "surface-container-highest": "#f8ddd2",
+                        "surface-dim": "#f0d4ca",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#001d35",
+                        "primary": "#a33e00",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#3d2d26",
+                        "surface-variant": "#f8ddd2",
+                        "background": "#fff8f6",
+                        "primary-fixed-dim": "#ffb596",
+                        "on-surface-variant": "#5a4136",
+                        "surface": "#fff8f6",
+                        "surface-container": "#ffe9e1",
+                        "on-error-container": "#93000a",
+                        "on-background": "#261812",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffdbcd",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "inverse-primary": "#ffb596",
+                        "surface-container-high": "#fee2d8",
+                        "inverse-on-surface": "#ffede7",
+                        "secondary": "#5f5e5e",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fff8f6",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "tertiary": "#0062a1",
+                        "on-secondary-container": "#636262",
+                        "outline": "#8e7164",
+                        "on-primary-container": "#561d00",
+                        "tertiary-container": "#009cfc",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#360f00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e2dfde",
+                        "surface-container-low": "#fff1ec",
+                        "on-tertiary-container": "#003155",
+                        "primary-container": "#ff6600",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "outline-variant": "#e3bfb1",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "on-surface": "#261812",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "xl": "40px",
+                        "container-max": "1280px",
+                        "unit": "4px",
+                        "gutter": "12px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "price": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h2": ["20px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "h1": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "price": ["18px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-bold": ["11px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "display": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar (Simplified for Checkout) -->
+<header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 w-full px-6 py-3 border-b border-neutral-200 flex justify-between items-center">
+<div class="text-2xl font-black text-orange-600 tracking-tighter">Moneki Store</div>
+<!-- Navigation Links (Visible on desktop, but inactive/secondary style for focus) -->
+<nav class="hidden md:flex gap-6">
+<span class="text-neutral-400 font-['Plus_Jakarta_Sans'] text-sm tracking-tight">New Arrivals</span>
+<span class="text-neutral-400 font-['Plus_Jakarta_Sans'] text-sm tracking-tight">Pre-orders</span>
+<span class="text-neutral-400 font-['Plus_Jakarta_Sans'] text-sm tracking-tight">Exclusives</span>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-neutral-600">person</span>
+<span class="material-symbols-outlined text-neutral-600">shopping_cart</span>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 py-10">
+<!-- Progress Stepper -->
+<div class="mb-10 max-w-2xl mx-auto">
+<div class="flex items-center justify-between relative">
+<!-- Lines -->
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-neutral-200 -z-10 -translate-y-1/2"></div>
+<div class="absolute top-1/2 left-0 w-[100%] h-[2px] bg-primary-container -z-10 -translate-y-1/2"></div>
+<!-- Steps -->
+<div class="flex flex-col items-center gap-2 bg-background px-4">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-xs font-bold">1</div>
+<span class="font-label-bold text-neutral-500 uppercase tracking-widest text-[10px]">Carrito</span>
+</div>
+<div class="flex flex-col items-center gap-2 bg-background px-4">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-xs font-bold">2</div>
+<span class="font-label-bold text-neutral-500 uppercase tracking-widest text-[10px]">Envío &amp; Pago</span>
+</div>
+<div class="flex flex-col items-center gap-2 bg-background px-4">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary ring-4 ring-primary-fixed flex items-center justify-center text-xs font-bold">3</div>
+<span class="font-label-bold text-primary-container uppercase tracking-widest text-[10px]">Revisión</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Order Details -->
+<div class="lg:col-span-8 space-y-8">
+<h1 class="font-h1 text-h1 text-on-background mb-6">Revisa tu Pedido</h1>
+<!-- Delivery Info Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Shipping Address -->
+<div class="bg-white p-6 border border-neutral-200 rounded-sm shadow-sm relative group">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-label-bold uppercase tracking-wider">Dirección de Envío</span>
+</div>
+<button class="text-xs text-blue-600 hover:underline font-medium">Editar</button>
+</div>
+<p class="font-h2 text-body-lg text-on-surface mb-1">Carlos Mendoza</p>
+<p class="text-neutral-600 font-body-md">Av. Javier Prado Este 1235, Dpto 402</p>
+<p class="text-neutral-600 font-body-md">San Borja, Lima, Perú</p>
+<p class="text-neutral-600 font-body-md">+51 987 654 321</p>
+</div>
+<!-- Shipping Method -->
+<div class="bg-white p-6 border border-neutral-200 rounded-sm shadow-sm relative group">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+<span class="font-label-bold uppercase tracking-wider">Método de Envío</span>
+</div>
+<button class="text-xs text-blue-600 hover:underline font-medium">Editar</button>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-neutral-100 flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-neutral-400">package_2</span>
+</div>
+<div>
+<p class="font-h2 text-body-lg text-on-surface">Olva Courier</p>
+<p class="text-neutral-500 font-body-sm italic">Entrega estimada: 2-3 días hábiles</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Payment Method -->
+<div class="bg-white p-6 border border-neutral-200 rounded-sm shadow-sm relative group">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span class="font-label-bold uppercase tracking-wider">Método de Pago</span>
+</div>
+<button class="text-xs text-blue-600 hover:underline font-medium">Editar</button>
+</div>
+<div class="flex items-center gap-4">
+<div class="px-3 py-1 border border-neutral-200 rounded-sm text-xs font-bold text-neutral-400">VISA</div>
+<div>
+<p class="font-h2 text-body-lg text-on-surface">Tarjeta terminada en **** 4242</p>
+<p class="text-neutral-500 font-body-sm">Vencimiento: 12/26</p>
+</div>
+</div>
+</div>
+<!-- Item Summary List -->
+<div class="pt-6 border-t border-neutral-200">
+<h2 class="font-h2 text-h2 mb-4">Artículos en tu pedido</h2>
+<div class="space-y-4">
+<!-- Product Item 1 -->
+<div class="flex gap-4 items-center bg-white border border-neutral-100 p-3 rounded-sm">
+<div class="w-20 h-20 bg-neutral-50 flex-shrink-0 overflow-hidden">
+<img alt="Figura Coleccionable" class="w-full h-full object-cover" data-alt="A premium high-fidelity scale figure of a futuristic anime protagonist standing in a dynamic action pose. The figure features intricate armor detailing with glossy orange accents and matte black finishes, professionally photographed against a clean, minimalist white studio background. The lighting is crisp and detailed, highlighting the high-end craftsmanship and paintwork expected by elite collectors in an Akihabara retail environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp32ArYmf46vBUfT3OV8Dtx8aEhZqJGu1hQsFvnNsYk2RZJlU636ZFFYXDm4Df3taL_BddPfuTOnOvwp8yIRh9YoCLfjSMaP6ShnGPdBLr-aoAEnBZO2Pj2a55W0GRCEHb-T6yf5vNfWwDY53tY9UwQgd2OrQh2N0U7THJeTk2Lzr9mcEG5QrpVMTd-CLrW35evlq0r1HTJhOvMu-m2SVK60GaaFSaJKEQV79efcbrKLMtuIb4dfxK1V1rxjKih3GAbiet_VGId8XA">
+</div>
+<div class="flex-grow">
+<p class="text-neutral-400 font-body-sm mb-1 uppercase tracking-tighter">Good Smile Company</p>
+<p class="font-h2 text-body-md font-bold leading-tight line-clamp-1">Nendoroid Denji - Chainsaw Man Edition</p>
+<p class="text-neutral-500 font-body-sm">Cantidad: 1</p>
+</div>
+<div class="text-right">
+<p class="font-price text-price text-orange-600">S/. 280.00</p>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="flex gap-4 items-center bg-white border border-neutral-100 p-3 rounded-sm">
+<div class="w-20 h-20 bg-neutral-50 flex-shrink-0 overflow-hidden">
+<img alt="Model Kit" class="w-full h-full object-cover" data-alt="A detailed scale model kit box art showing a mecha robot with vibrant orange and white plating. The artwork is set against a technological blueprint background, emphasizing the technical complexity and collector value. The scene is bright and commercial, mimicking the dense but organized shelves of a premium Tokyo hobby shop. High-contrast colors and sharp lines dominate the visual presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtUfoMNDmRPkNJD1xGSX4Hau_jQMLNQAiKnRBmaw4O9wG0IPF37KGFZDSDEkg--CVsI4v7fTYtr7A2Jqqi8Q12mOlwLimkdVQT4Ahp4v1p-S2bW_DpBGy5_1Z0dHSAsOnJF0PP6KVhGzG3IGYP-KT3JcIV5ZcaTY8L_jj4v0c79kE8vPRGEZZTR1nd-3yz73AIGZ0sEOmLjRsBJ4ckLdCLzq_8X9uqvQRStoBM27pIlluCGX-F0gBokl7Uk808kfkt3lnqRew78KZh">
+</div>
+<div class="flex-grow">
+<p class="text-neutral-400 font-body-sm mb-1 uppercase tracking-tighter">Bandai Spirits</p>
+<p class="font-h2 text-body-md font-bold leading-tight line-clamp-1">HG 1/144 Gundam Aerial - Rebuild Version</p>
+<p class="text-neutral-500 font-body-sm">Cantidad: 2</p>
+</div>
+<div class="text-right">
+<p class="font-price text-price text-orange-600">S/. 600.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar Summary -->
+<aside class="lg:col-span-4">
+<div class="bg-white border border-neutral-200 rounded-sm p-6 sticky top-24">
+<h2 class="font-h2 text-h2 mb-6 border-b border-neutral-100 pb-4">Resumen</h2>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between text-neutral-600">
+<span class="font-body-md">Subtotal (3 items)</span>
+<span class="font-body-md">S/. 880.00</span>
+</div>
+<div class="flex justify-between text-neutral-600">
+<span class="font-body-md">Envío (Olva Courier)</span>
+<span class="font-body-md">S/. 30.00</span>
+</div>
+<div class="flex justify-between text-neutral-600">
+<span class="font-body-md">Impuestos (IGV 18%)</span>
+<span class="font-body-md text-xs italic">Incluido</span>
+</div>
+</div>
+<div class="border-t border-neutral-200 pt-6 mb-8">
+<div class="flex justify-between items-baseline">
+<span class="font-h1 text-h1 uppercase tracking-tighter">Total</span>
+<div class="text-right">
+<span class="font-price text-3xl text-orange-600">S/. 910.00</span>
+<p class="text-[10px] text-neutral-400 font-label-bold uppercase">Soles Peruanos</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-primary-container text-on-primary py-4 rounded-sm font-h2 font-bold tracking-tight hover:brightness-110 transition-all scale-98-on-click shadow-md">
+                            Finalizar Compra
+                        </button>
+<div class="bg-neutral-50 p-4 rounded-sm flex gap-3">
+<span class="material-symbols-outlined text-neutral-400 text-sm">verified_user</span>
+<p class="text-[11px] text-neutral-500 font-body-sm leading-relaxed">
+                                Tu compra está protegida por nuestra <strong>Garantía de Autenticidad</strong> Moneki Store. Transacción segura con cifrado SSL de 256 bits.
+                            </p>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-center gap-4 opacity-50 grayscale">
+<img alt="Visa" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJoQHoF1WvPyq_OHYGpBwanz0XJm1ADuK9Nieca7synZEuAo1EQAbsWyMXc7-MyWeT5FmgSriRsBWquSn33iMKCXJvE1Pjht6pigNi1FpAcBElC29eAh9xndnkGtIa1CVFCZ0PnzDG2m6mlhyIy0tMPKKpJ3icEcnD3jNVedOrlje069GGmZtHHXaRMQAbv8bza-7VcwA01wDr4cAowAzxYx2JVkfSXVb9XO4AxbVdKpY6jzsyokbYexsrcMgRjRB2-_J37H8vlT-F">
+<img alt="Mastercard" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfuHfVVUUqM4wkVpQIPzkmEgJE2kY12hvn7RoayBxNpMjJT8gfz8Ef6NibrTKpW4OIISY9P-KAlKgg1bRepPfneZZfbj9jIAGfKachWF1SD8IHyG02fRqHyWggFz_-bT5fGbgd3JX3JArrYttyA92q1H-skwF2ZGz4unH-I2Ns_jq1rf_5musFefFmOO0kyYLmvcZ2VVZ2cS6MkHycLeENs2WbwJzyKByomdAWmrlP6u56u_GfDd8c9d_MaxcO6AMrIvj6LGr1OmN9">
+<img alt="Amex" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhhz2Fm85b0F6NG9meoENU44omMLJEBrnCtARDMBKRDVwJCpfwxTz5Hfsql4Ldbu3q0CEscIYBOBWwNOuJklgMHAVtDHYQpzoq-SOv2tD_Xv2NNtQ7jrOimCjcSci-rLpTIS0uVtTmnXT_fHblU_KZGEgJJD5fl7AV0mLf9wHkeT3BnIm6IUFk9qxjATox4KzNzQpVCVnW93cXaQOFoOBNDHVWDUmo3mXAiecdGw8cKBYs4-rEe-_O9tLkwrT2GdvtVZIK781D6eDq">
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-50 dark:bg-neutral-950 w-full border-t border-neutral-200 mt-20">
+<div class="w-full max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1">
+<div class="text-xl font-black text-neutral-400 mb-6 uppercase tracking-tighter">Moneki Store</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 leading-relaxed">
+                    © 2024 Moneki Store. Tokyo Akihabara. All rights reserved.
+                </p>
+</div>
+<div>
+<h4 class="font-label-bold uppercase tracking-widest text-neutral-900 mb-4">Ayuda</h4>
+<ul class="space-y-2">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Shipping Information</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Returns &amp; Exchanges</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold uppercase tracking-widest text-neutral-900 mb-4">Información</h4>
+<ul class="space-y-2">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Technical Specs Guide</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Authenticity Guarantee</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold uppercase tracking-widest text-neutral-900 mb-4">Contacto</h4>
+<ul class="space-y-2">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Contact Collector Support</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

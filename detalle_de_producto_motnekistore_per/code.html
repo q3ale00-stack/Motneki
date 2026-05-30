@@ -1,0 +1,374 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#261812",
+                    "on-secondary-container": "#636262",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#f8ddd2",
+                    "primary": "#a33e00",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#ff6600",
+                    "outline-variant": "#e3bfb1",
+                    "surface-tint": "#a33e00",
+                    "inverse-surface": "#3d2d26",
+                    "surface-container-low": "#fff1ec",
+                    "outline": "#8e7164",
+                    "surface": "#fff8f6",
+                    "secondary": "#5f5e5e",
+                    "background": "#fff8f6",
+                    "tertiary-fixed-dim": "#9ccaff",
+                    "on-primary-fixed-variant": "#7c2e00",
+                    "on-primary-fixed": "#360f00",
+                    "tertiary-container": "#009cfc",
+                    "on-primary-container": "#561d00",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-bright": "#fff8f6",
+                    "tertiary-fixed": "#d0e4ff",
+                    "on-surface-variant": "#5a4136",
+                    "on-tertiary-fixed-variant": "#00497b",
+                    "inverse-primary": "#ffb596",
+                    "surface-container-high": "#fee2d8",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#474746",
+                    "surface-dim": "#f0d4ca",
+                    "primary-fixed-dim": "#ffb596",
+                    "on-tertiary-fixed": "#001d35",
+                    "primary-fixed": "#ffdbcd",
+                    "on-tertiary-container": "#003155",
+                    "inverse-on-surface": "#ffede7",
+                    "surface-container": "#ffe9e1",
+                    "on-surface": "#261812",
+                    "tertiary": "#0062a1",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#f8ddd2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "lg": "24px",
+                    "md": "16px",
+                    "sm": "8px",
+                    "xl": "40px",
+                    "gutter": "12px",
+                    "unit": "4px",
+                    "xs": "4px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "h1": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h2": ["Plus Jakarta Sans"],
+                    "display": ["Plus Jakarta Sans"],
+                    "body-sm": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "price": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "h1": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h2": ["20px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "label-bold": ["11px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "price": ["18px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .scale-98-on-click:active { transform: scale(0.98); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md" data-mode="connect">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-6 py-3 sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-black text-orange-600 tracking-tighter font-h1" href="#">MotnekiStore</a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight text-neutral-600 dark:text-neutral-400 hover:text-orange-600 transition-all duration-200" href="#">Novedades</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight text-orange-600 dark:text-orange-500 font-bold border-b-2 border-orange-600 pb-1" href="#">Preventas</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight text-neutral-600 dark:text-neutral-400 hover:text-orange-600 transition-all duration-200" href="#">Exclusivos</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight text-neutral-600 dark:text-neutral-400 hover:text-orange-600 transition-all duration-200" href="#">Figuras a Escala</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-tight text-neutral-600 dark:text-neutral-400 hover:text-orange-600 transition-all duration-200" href="#">Nendoroids</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" data-icon="search">search</span>
+<input class="bg-neutral-100 border-none rounded-sm pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-1 focus:ring-orange-600" placeholder="Buscar en el catálogo..." type="text">
+</div>
+<button class="material-symbols-outlined text-neutral-600 hover:bg-neutral-50 p-2 rounded-sm transition-all" data-icon="person">person</button>
+<button class="material-symbols-outlined text-neutral-600 hover:bg-neutral-50 p-2 rounded-sm transition-all relative" data-icon="shopping_cart">
+                shopping_cart
+                <span class="absolute top-1 right-1 bg-primary-container text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 py-10">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-body-sm text-neutral-500 mb-8">
+<a class="hover:text-orange-600" href="#">Inicio</a>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-orange-600" href="#">Figuras a Escala</a>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-neutral-800 font-medium">Idol Angel 1/6 Scale Figure</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left: High-Res Image Gallery -->
+<div class="lg:col-span-7 space-y-gutter">
+<div class="bg-white border border-neutral-200 p-2 relative">
+<span class="absolute top-4 left-4 z-10 bg-tertiary-container text-white text-label-bold px-3 py-1.5 rounded-sm uppercase tracking-wider shadow-sm">Preventa</span>
+<img class="w-full aspect-[4/5] object-contain bg-white rounded-sm" data-alt="A professional studio photography of a high-end 1/6 scale anime figure named Idol Angel. She is captured in a dynamic pose with flowing hair and a detailed idol outfit featuring vibrant orange and white colors. The lighting is crisp and bright, characteristic of high-end Akihabara retail displays, emphasizing the smooth PVC textures and intricate sculpt details against a clean, minimalist white background." src="https://i.ebayimg.com/images/g/5oAAAeSwWxpqCE1h/s-l1600.webp">
+</div>
+<div class="grid grid-cols-5 gap-gutter">
+<button class="border-2 border-orange-600 p-1 bg-white">
+<img class="w-full aspect-square object-cover" data-alt="Close-up detail shot of the Idol Angel figure's face, highlighting the expressive hand-painted eyes and delicate sculpting of the hair. The style is clean and professional with soft, high-key lighting consistent with the primary product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFlyuAibxgM57vvLoTR5eNk7AsacCYlBvY0yOWOxZ0zuVem5uBV5EHD9yFZSl9a0gx6EOEI7KdJlB8kQKrHk1vmGaljHqe2TCDA6RdPg3aPbkw7Ld7CfOXrbcIs2kCIEbWor0CGdQJJbJVVU0-jIDTNxWr9C5K1Uz6YP7h8Pr3cHZX6bciUXGBZ5bNWqj0bVSiGSpccdpM5lgeihbJZHEMp8EefL-74nA7X62RGh5pVqL6u6Npy_7hOpdnbHVz7JDGlz-7-qNMVWDK">
+</button>
+<button class="border border-neutral-200 p-1 bg-white hover:border-orange-300 transition-colors">
+<img class="w-full aspect-square object-cover" data-alt="Side profile view of the 1/6 scale anime figure showing the intricate details of the dynamic clothing and the elegant curvature of the pose. The background is a pure, minimalist light grey that complements the vibrant orange accents of the figure's costume." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJomtQ2lwy1Ha84p3PXPJA6msGUcPQEshJwQ6EtdCwbSkqOLLBl7KsIHhelNPQ5fHgKgE6D-5mJW6fjIj5bTFwkANpC1fLOEduE6_1GLA_jY5jpi1ktJXNwe15Opx1DrBk1r2nsZjO-scC9VF_I6tX6AZdX9x_0vk3j5V3FNb0wsPIRLCpbkDA6ID8RPdUtYy3uYfmqguhMfmxpJJ_k1aBNFFj8BYNfKKccnEZK-r_GOx9pYFE7y2uomc99s8q6DevBpBr-C5eFNwH">
+</button>
+<button class="border border-neutral-200 p-1 bg-white hover:border-orange-300 transition-colors">
+<img class="w-full aspect-square object-cover" data-alt="Rear view focusing on the elaborate base and back details of the character's costume, including translucent effect parts. The lighting is expertly controlled to create subtle shadows that define the figure's volume and professional finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVVgoOjDXWF9rRRWQTU2NLm77DO6NoMat-fD92GbSHfk0mcvzbioo7681FzRWk6QNlrutN7WH700JNA6XJHPtqWWabAXSot78Dpl5QVGNERTePC1jAZaad1yCdj3YRi80TVaAqG6lUQHRla-c5FXnVMf8RGNnh6GYWfp1ff1OQ_xZVKNhFCnbortoviRp9sDxfLV36JRi3kxrWJs7aKGbun7t_zHfuA0s9y7CwDvND68le2JVpyrUTT3nqKwXWHotCEMbh3KmQcURB">
+</button>
+<button class="border border-neutral-200 p-1 bg-white hover:border-orange-300 transition-colors">
+<img class="w-full aspect-square object-cover" data-alt="Detail shot of the figure's accessories, such as the microphone and base embellishments. The image is bright and sharp, emphasizing the high-quality craftsmanship of the premium scale figure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_cpkBc50T0fWOLOn0IwR4M-H-ljFecVIRCg8-iUgDwpKCq9m97KBHg3ILLZSP_uXvBUst3V6QuolSLsVTWqUE_pRyzCP6EOEvHPy2jkqIvnrwdd9B-b78AprsIBc_4XQB9n_RR__YP8GQ66sz7vR6Vxf7ij8CPpZ3XnCrAohi-3ffsaAPTlObUIfyFFyxcWMWT0NVdMQAtf_NZPlz01BnfYjJevFDDF7rHWPNnu6swkIRQsg7WNXTlu-Zd9-GQrRcNGTxDp-VU2pz">
+</button>
+<button class="border border-neutral-200 p-1 bg-white hover:border-orange-300 transition-colors relative">
+<img class="w-full aspect-square object-cover opacity-50" data-alt="A wide shot of the collector's item in its premium packaging. The lighting is soft and professional, maintaining a clean retail aesthetic that highlights the exclusivity of the product." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ8V9_EY-rQrWKxw2PJN6uEw4kxeKfMbm9yN3KZ4bKB-45VUO5zYs1oX9ciwJa9aQVpzGM6Xg3OEulQYujr80iZii1Dp3kEyEZN8GuGCJUrkgYBYno4FxDYvHhDF0DFWPbUvdLyTNan6bLsMbhE-H3pLw99aRHNwhr8QRgOcBw8g3yGU_qT2PVtrMQuDTIipzp78m-MINu3uyeha9WymCIIEJCln5i4T19r2ojvGjCPqeihhtYx20S3RKJ4S7hposGOl0nI0nlBpA8">
+<span class="absolute inset-0 flex items-center justify-center text-body-sm font-bold text-neutral-800">+12</span>
+</button>
+</div>
+</div>
+<!-- Right: Product Info -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="mb-2">
+<span class="text-body-sm text-neutral-500 font-medium">Serie Starlight Symphony</span>
+</div>
+<h1 class="font-h1 text-display text-on-background mb-1"><span style="color: rgb(25, 25, 25); font-family: &quot;Market Sans&quot;, Arial, sans-serif; font-size: 22px; letter-spacing: normal; background-color: rgb(255, 255, 255);" class="">Bandai Figuarts Zero One Piece Kaido of the Beasts</span></h1>
+<div class="flex items-center gap-4 mb-6">
+<span class="text-body-md font-semibold text-neutral-700">Fabricante: <span class="text-orange-600">Celestial Crafts</span></span>
+<div class="flex items-center text-yellow-500">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">Fabricante: <span class="text-orange-600">Celestial Crafts</span></span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="ml-1 text-body-sm text-neutral-500">(48 reseñas)</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-sm mb-8 border border-outline-variant">
+<div class="flex items-end gap-3 mb-4">
+<span class="text-price text-[32px] text-primary">S/. 620.00</span>
+<span class="text-body-md text-neutral-500 line-through mb-1">S/. 685.00</span>
+<span class="bg-error text-white text-label-bold px-2 py-0.5 rounded-sm mb-1">AHORRA 10%</span>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-neutral-500">Fecha de Lanzamiento</span>
+<span class="font-bold text-on-background">Septiembre 2024</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-neutral-500">Cierre de Preventa</span>
+<span class="font-bold text-error">15 de mayo, 2024</span>
+</div>
+<div class="w-full bg-neutral-200 h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-3/4"></div>
+</div>
+<p class="text-[11px] text-neutral-500 text-right">75% de los cupos de preventa reservados</p>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<button class="w-full bg-primary-container text-white py-4 rounded-sm font-bold text-body-lg flex items-center justify-center gap-3 hover:bg-primary transition-all scale-98-on-click"><span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span> AGREGAR AL CARRITO</button>
+<div class="grid grid-cols-2 gap-3">
+<button class="border border-neutral-800 py-3 rounded-sm font-bold text-body-sm flex items-center justify-center gap-2 hover:bg-neutral-50 transition-all scale-98-on-click"><span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span> FAVORITOS</button>
+<button class="border border-neutral-800 py-3 rounded-sm font-bold text-body-sm flex items-center justify-center gap-2 hover:bg-neutral-50 transition-all scale-98-on-click"><span class="material-symbols-outlined text-[18px]" data-icon="share">share</span> COMPARTIR</button>
+</div>
+</div>
+</div>
+<div class="border-t border-neutral-200 pt-6 space-y-4">
+<div class="flex gap-4 p-4 bg-white border border-neutral-100 rounded-sm">
+<span class="material-symbols-outlined text-orange-600" data-icon="verified">verified</span>
+<div>
+<p class="text-body-sm font-bold">Envío para Coleccionistas</p>
+<p class="text-body-sm text-neutral-500 leading-tight">Empaque doble con protección de burbujas de alta resistencia. Envíos seguros a todo el Perú.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-white border border-neutral-100 rounded-sm">
+<span class="material-symbols-outlined text-orange-600" data-icon="package_2">package_2</span>
+<div>
+<p class="text-body-sm font-bold">Envío para Coleccionistas</p>
+<p class="text-body-sm text-neutral-500 leading-tight">Empaque doble con protección de burbujas de alta resistencia. Envíos seguros a todo el Perú.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Info Sections -->
+<div class="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-8">
+<div class="border-b border-neutral-200 flex gap-8 mb-8">
+<button class="pb-4 border-b-2 border-orange-600 font-bold text-on-background text-body-md">Descripción</button>
+<button class="pb-4 text-neutral-500 hover:text-orange-600 transition-colors text-body-md">Envío y Devoluciones</button>
+<button class="pb-4 text-neutral-500 hover:text-orange-600 transition-colors text-body-md">Opiniones (48)</button>
+</div>
+<div class="prose prose-sm max-w-none text-neutral-600 space-y-4">
+<p class="text-body-lg text-on-background font-medium leading-relaxed">¡De la exitosa serie de anime "Starlight Symphony" llega una hermosa figura a escala 1/6 de la propia ídolo angelical, Angel! Capturada en su pose característica "Descenso Cósmico", cada detalle de su intrincado vestuario ha sido fielmente recreado.</p>
+<p>La figura presenta un trabajo de pintura de alta calidad que transiciona de un blanco perlado a un naranja atardecer vibrante, imitando la iluminación de su actuación final. La base está diseñada como un fragmento de un escenario de cristal, completa con piezas translúcidas compatibles con LED que captan la luz maravillosamente.</p>
+<ul class="list-disc pl-5 space-y-2 mt-4 text-body-md">
+<li>Pose flotante dinámica lograda con soporte estructural reforzado</li>
+<li>Material translúcido utilizado en las puntas del cabello y adornos del traje</li>
+<li>Placa facial intercambiable con expresión de "guiño" incluida como bono de primera edición</li>
+<li>Micrófono y accesorios de estrella esculpidos con precisión</li>
+</ul>
+</div>
+</div>
+<div class="lg:col-span-4">
+<h3 class="font-h2 text-h2 mb-6 uppercase tracking-tight">ESPECIFICACIONES TÉCNICAS</h3>
+<div class="bg-white border border-neutral-200 rounded-sm overflow-hidden">
+<table class="w-full text-body-sm">
+<tbody><tr class="border-b border-neutral-100">
+<td class="p-3 bg-neutral-50 text-neutral-500 font-medium w-1/3">Escala</td>
+<td class="p-3 text-on-background font-bold">Escala 1/6</td>
+</tr>
+<tr class="border-b border-neutral-100">
+<td class="p-3 bg-neutral-50 text-neutral-500 font-medium">Altura</td>
+<td class="p-3 text-on-background font-bold">Aprox. 285mm</td>
+</tr>
+<tr class="border-b border-neutral-100">
+<td class="p-3 bg-neutral-50 text-neutral-500 font-medium">Material</td>
+<td class="p-3 text-on-background font-bold">PVC, ABS, POM</td>
+</tr>
+<tr class="border-b border-neutral-100">
+<td class="p-3 bg-neutral-50 text-neutral-500 font-medium">Escultor</td>
+<td class="p-3 text-on-background font-bold">Masaki Apsy</td>
+</tr>
+<tr class="border-b border-neutral-100">
+<td class="p-3 bg-neutral-50 text-neutral-500 font-medium">Pintura</td>
+<td class="p-3 text-on-background font-bold">Motneki Studio</td>
+</tr>
+<tr>
+<td class="p-3 bg-neutral-50 text-neutral-500 font-medium">Categoría</td>
+<td class="p-3 text-on-background font-bold">Figura Completa</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<!-- Related Products -->
+<section class="mt-24">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-h1 text-h1">Productos Relacionados</h2>
+<p class="text-body-sm text-neutral-500">Otros coleccionistas también compraron estos artículos</p>
+</div>
+<a class="text-orange-600 font-bold text-body-sm flex items-center gap-1 hover:underline" href="#">Ver Catálogo <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-gutter">
+<!-- Related Card 1 -->
+<div class="group bg-white border border-neutral-200 p-2 hover:shadow-md transition-shadow">
+<div class="relative overflow-hidden mb-3 aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A highly detailed 1/7 scale anime figure of a cybernetic warrior standing on a futuristic metallic base. The figure features complex mechanical armor with metallic silver and deep blue finishes, captured under cool, neon-influenced studio lighting to emphasize the tech-focused design and sharp sculpt lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEBVlMq2EJNCCLPbhoH0BmsL3Z1sBvp_08Pq6Csv_Vd-0W2FIsRTGSquE_gyxG2obssJ68LuWm5Akipuf3l0Xw0iQl1I2k7jMD2C9WJON6AGT00fUDZ_lU3nISCG4Z9yc_mEnu18FFTgWKbqq64AOQYhMS_U5DtbvJ0Dcql7dwmRZ_Mhp_xRGcz325Sn9EoupmsRR66cG9dGYCAS80AvyhgV0dr-B2psWJM11dTQ5C-HJrNF7d7O-GzX4NiK5QTU5dQrqbWBRFtuv4">
+<span class="absolute top-2 left-2 bg-yellow-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">EXCLUSIVO</span>
+</div>
+<p class="text-[10px] text-neutral-400 uppercase font-bold">Future Tech</p>
+<h4 class="text-body-sm font-bold text-neutral-800 line-clamp-2 min-h-[40px] mb-2">Figura Neon Cyber Escala 1/7: Edición Especial</h4>
+<p class="text-primary font-bold text-price">S/. 459.00</p>
+</div>
+<!-- Related Card 2 -->
+<div class="group bg-white border border-neutral-200 p-2 hover:shadow-md transition-shadow">
+<div class="relative overflow-hidden mb-3 aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A cute chibi-style PVC figure representing a classic magical girl character with a large wand and elaborate pink ribbons. The photography is soft and warm, with a bright white background that accentuates the cheerful and bubbly aesthetic of the collectible, perfect for a high-end hobby shop catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLEudE5OzSuNEtji6krBM_pWwfFvZnJ2ZY18frbLW05nYNlT7lSRvS_43HBntWyvGfKIabSClhZon7WNJhir7NUjjWZxcr4FvbfCDnpoKKmrJ_6ntGpWzh1U22kSGVEZODKI-MqRpr0udpUvdJwZG9DZJGiHi5ucdQCEw0yoBabWxnJ7-C2Q57W_cKJoYF3xnnT8GrfsPx5y_K8sY3aZa1BfXmGgTEuRluELv_tfb9C53I1eoB0wQFDJxjPvosdlAobuz_xHBal5ct">
+<span class="absolute top-2 left-2 bg-orange-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">OFERTA</span>
+</div>
+<p class="text-[10px] text-neutral-400 uppercase font-bold">Magical Dream</p>
+<h4 class="text-body-sm font-bold text-neutral-800 line-clamp-2 min-h-[40px] mb-2">Set de Figuras Chibi Pink Blossom</h4>
+<p class="text-primary font-bold text-price">S/. 155.00</p>
+</div>
+<!-- Related Card 3 -->
+<div class="group bg-white border border-neutral-200 p-2 hover:shadow-md transition-shadow">
+<div class="relative overflow-hidden mb-3 aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A premium 1/4 scale anime figure of a fantasy princess sitting on a throne of crystalline flowers. The image showcases the high-resolution texture of her flowing gown and the translucent quality of the base. The lighting is dramatic and elegant, highlighting the high-end artisan quality of the manufacture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADDMR3UDcn7PpLBlwvmRku-eknG_tWjbKSqthE1FSCq-8dY-T_radl5CPA2FftWzYgpxtn3mG6XEfFLl_P7FAgklEphRRsmIbpklRYdbetgspnluLZhpQKUpPlZgg5xgsNfzCI8Jf2BEKmDMTqLCEvY1agXQt9BKAOADah-9wd_ZJqwLza4tsJY_O_2wVMK892Jo9vN8y8TdPa162vBPBTtFBwkMB__pfFNJIO-S7RawBj_X19PqcmSoinRJuzQWV7zEP_ojDCtnA_">
+</div>
+<p class="text-[10px] text-neutral-400 uppercase font-bold">Celestial Crafts</p>
+<h4 class="text-body-sm font-bold text-neutral-800 line-clamp-2 min-h-[40px] mb-2">Princesa Crystal Throne Escala 1/4</h4>
+<p class="text-primary font-bold text-price">S/. 1,045.00</p>
+</div>
+<!-- Related Card 4 -->
+<div class="group bg-white border border-neutral-200 p-2 hover:shadow-md transition-shadow">
+<div class="relative overflow-hidden mb-3 aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Detailed close up of a posable action figure with multiple accessories including weapons and interchangeable hands. The figure is posed in a combat stance, emphasizing the high articulation and paint quality. The background is a clean neutral grey, providing a professional retail look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdngBjHEKsKaRev4P96T8fJsgrYWfkboUWgLWXnACZ9Kq86FjTjnzjL7qgAPxLzeUv_hc8veYZBgHm-BtMSQvbDcmFB_7wZqnUK_bRh0HCq-qleVCvPwLI2jt6H3-k-0kji0ZVICdDzzQn1DqS1ftORHLyYMYKCGcjYsA5rb1JRamiEU1nOng-lqn3Eo0IoJqT3nIKTL1aLbEWzKpIW-5UwY5eBwZJ3HCZNUcgYzG1Z7QqUvTAPqeiKS9_oUsuh1fwjQlSeyt92dcE">
+<span class="absolute top-2 left-2 bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">NEW</span>
+</div>
+<p class="text-[10px] text-neutral-400 uppercase font-bold">Combat Frame</p>
+<h4 class="text-body-sm font-bold text-neutral-800 line-clamp-2 min-h-[40px] mb-2">Figura Articulada Vanguard Commander</h4>
+<p class="text-primary font-bold text-price">S/. 245.00</p>
+</div>
+<!-- Related Card 5 -->
+<div class="group bg-white border border-neutral-200 p-2 hover:shadow-md transition-shadow">
+<div class="relative overflow-hidden mb-3 aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A 1/8 scale anime figure featuring a character in a traditional kimono with intricate floral patterns. The lighting is warm and invites appreciation of the delicate paintwork and gold leaf accents. The composition is clean and focused, ideal for a collector's shopping experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA1JtdQ3oUkQGvkly-CmGHV0wGFpzKPS3e-RIIfGepqVrYj9Y0KfQPe_bnUDsCnjjbDQP1qnjwQY6Ys0iS5Fd0MiPWxhC7NE1KQ2XN9-mazYa1639OCdyMDtlx5yifksy3IG1MWbCwix4XMQ3QTXWL8QHclh6gzcT4YtKplFV_XZII5zHi35Vc7T36RdbzaShmu2DJ5-JhoxkNTJGih7rWupS8AUcXscstEdPpqJFf9m3STFmm5KUAK77_WKcGwsPTjcjc5VNYY-aM">
+</div>
+<p class="text-[10px] text-neutral-400 uppercase font-bold">Heritage Line</p>
+<h4 class="text-body-sm font-bold text-neutral-800 line-clamp-2 min-h-[40px] mb-2">Serie Spring Kimono: Yuri Escala 1/8</h4>
+<p class="text-primary font-bold text-price">S/. 395.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-neutral-50 border-t border-neutral-200 mt-20">
+<div class="w-full max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-black text-neutral-400 font-h1">MotnekiStore</span>
+<p class="mt-4 text-body-sm text-neutral-500 leading-relaxed uppercase tracking-widest">Tu destino definitivo para coleccionistas de figuras premium en Perú.</p>
+<p class="mt-6 text-xs text-neutral-400">© 2024 MotnekiStore. Perú. Todos los derechos reservados.</p>
+</div>
+<div>
+<h4 class="font-h2 text-body-sm mb-6 uppercase tracking-widest text-neutral-900">Soporte</h4>
+<ul class="space-y-4">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Información de Envío</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Devoluciones y Cambios</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Contacto Soporte al Coleccionista</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-h2 text-body-sm mb-6 uppercase tracking-widest text-neutral-900">Información</h4>
+<ul class="space-y-4">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Guía de Especificaciones</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Garantía de Autenticidad</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-h2 text-body-sm mb-6 uppercase tracking-widest text-neutral-900">Boletín Informativo</h4>
+<p class="text-xs text-neutral-500 mb-4 uppercase tracking-widest">Recibe alertas de preventas y ofertas exclusivas en Perú.</p>
+<div class="flex">
+<input class="bg-white border-neutral-200 text-xs w-full focus:ring-orange-600 focus:border-orange-600 rounded-l-sm" placeholder="Correo Electrónico" type="email">
+<button class="bg-neutral-900 text-white px-4 py-2 text-xs font-bold rounded-r-sm hover:bg-orange-600 transition-colors uppercase">Unirse</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

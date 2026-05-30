@@ -1,0 +1,342 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#261812",
+                        "on-secondary-container": "#636262",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#f8ddd2",
+                        "primary": "#a33e00",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#ff6600",
+                        "outline-variant": "#e3bfb1",
+                        "surface-tint": "#a33e00",
+                        "inverse-surface": "#3d2d26",
+                        "surface-container-low": "#fff1ec",
+                        "outline": "#8e7164",
+                        "surface": "#fff8f6",
+                        "secondary": "#5f5e5e",
+                        "background": "#fff8f6",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "on-primary-fixed": "#360f00",
+                        "tertiary-container": "#009cfc",
+                        "on-primary-container": "#561d00",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e2dfde",
+                        "surface-bright": "#fff8f6",
+                        "tertiary-fixed": "#d0e4ff",
+                        "on-surface-variant": "#5a4136",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "inverse-primary": "#ffb596",
+                        "surface-container-high": "#fee2d8",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-dim": "#f0d4ca",
+                        "primary-fixed-dim": "#ffb596",
+                        "on-tertiary-fixed": "#001d35",
+                        "primary-fixed": "#ffdbcd",
+                        "on-tertiary-container": "#003155",
+                        "inverse-on-surface": "#ffede7",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container": "#ffe9e1",
+                        "on-surface": "#261812",
+                        "tertiary": "#0062a1",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#f8ddd2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "xl": "40px",
+                        "gutter": "12px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body-sm": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "price": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "h1": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h2": ["20px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "label-bold": ["11px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "price": ["18px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scale-98-on-click:active { transform: scale(0.98); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface font-body-md min-h-screen">
+<nav class="flex justify-between items-center w-full px-6 py-3 sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200">
+<div class="text-2xl font-black text-orange-600 tracking-tighter">MotnekiStore</div>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] text-sm tracking-tight">
+<a class="text-neutral-600 hover:text-orange-600 transition-all duration-200" href="#">Novedades</a>
+<a class="text-neutral-600 hover:text-orange-600 transition-all duration-200" href="#">Preventas</a>
+<a class="text-neutral-600 hover:text-orange-600 transition-all duration-200" href="#">Exclusivos</a>
+<a class="text-neutral-600 hover:text-orange-600 transition-all duration-200" href="#">Figuras a Escala</a>
+<a class="text-neutral-600 hover:text-orange-600 transition-all duration-200" href="#">Nendoroids</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-neutral-50 rounded-sm transition-all scale-98-on-click">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="p-2 hover:bg-neutral-50 rounded-sm transition-all scale-98-on-click">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</nav>
+<div class="flex max-w-[1440px] mx-auto min-h-screen">
+<aside class="fixed left-0 top-0 h-full w-64 hidden lg:flex flex-col z-40 bg-white border-r border-neutral-200 pt-20">
+<div class="p-6 border-b border-neutral-100 mb-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-sm bg-orange-100 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional close-up headshot of a smiling young male collector in a clean, bright Akihabara-style retail environment. The lighting is soft and high-key, emphasizing a friendly and trustworthy persona. The background features blurred glass display cases filled with vibrant Japanese anime figures, maintaining a high-end minimalist collector aesthetic with warm orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDxEgiCwsml0Q93D_Rpo-Jw_IA22e1PRpYOvYWqQG4Zb6UqOs3IM5CG3WMEkJ_lZbyaCrSlxxIHIyon2u7OD4aVMgYN9UIMa4W_Acl0LcYhEnGWPa3B5RQ0SCyA7QMmD3WYn-CguOGAzhfWU-JnkUfF3xnROJu6ZYjEHdSbf2-OAOe5bTwG978sfRJf6lWJftPky5yGhl9TrZS3xcBQN5PK5FH9G7v-vpVTmEGiZVE-QFjdz-GftCbsHrgxm2QxUDV9MfPAj8BiQIR">
+</div>
+<div>
+<p class="text-lg font-bold text-neutral-900 leading-none">Motneki Collector</p>
+<p class="text-xs text-neutral-500 mt-1 uppercase tracking-wider">Miembro Nivel 4</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<a class="flex items-center gap-3 text-neutral-600 px-4 py-3 hover:bg-neutral-50 rounded-sm transition-colors font-medium" href="#"><span class="material-symbols-outlined" data-icon="home">home</span> Inicio</a>
+<a class="flex items-center gap-3 text-neutral-600 px-4 py-3 hover:bg-neutral-50 rounded-sm transition-colors font-medium" href="#"><span class="material-symbols-outlined" data-icon="grid_view">grid_view</span> Catálogo</a>
+<a class="flex items-center gap-3 bg-neutral-100 text-orange-600 rounded-sm px-4 py-3 font-medium border-l-4 border-orange-600" href="#"><span class="material-symbols-outlined" data-icon="event_repeat">event_repeat</span> Rastreador de Preventas</a>
+<a class="flex items-center gap-3 text-neutral-600 px-4 py-3 hover:bg-neutral-50 rounded-sm transition-colors font-medium" href="#"><span class="material-symbols-outlined" data-icon="favorite">favorite</span> Lista de Deseos</a>
+<a class="flex items-center gap-3 text-neutral-600 px-4 py-3 hover:bg-neutral-50 rounded-sm transition-colors font-medium" href="#"><span class="material-symbols-outlined" data-icon="edit_note">edit_note</span> Pedidos Personalizados</a>
+</nav>
+<div class="p-4 mt-auto">
+<button class="w-full bg-orange-600 text-white py-3 px-4 rounded-sm font-bold text-sm tracking-tight scale-98-on-click hover:bg-orange-700 transition-all">Solicitar Figura Personalizada</button>
+</div>
+</aside>
+<main class="flex-1 lg:ml-64 p-6 md:p-10">
+<header class="mb-10">
+<h1 class="font-display text-display text-on-background">Panel del Coleccionista</h1>
+<p class="text-neutral-500 mt-2 font-body-lg">Gestiona tus colecciones, rastrea envíos y descubre nuevos artículos exclusivos.</p>
+</header>
+<div class="flex gap-8 border-b border-neutral-200 mb-8 overflow-x-auto no-scrollbar">
+<button class="pb-4 text-orange-600 border-b-2 border-orange-600 font-bold whitespace-nowrap text-sm">Perfil</button>
+<button class="pb-4 text-neutral-400 hover:text-neutral-900 transition-colors font-medium whitespace-nowrap text-sm">Mis Pedidos</button>
+<button class="pb-4 text-neutral-400 hover:text-neutral-900 transition-colors font-medium whitespace-nowrap text-sm">Preventas</button>
+<button class="pb-4 text-neutral-400 hover:text-neutral-900 transition-colors font-medium whitespace-nowrap text-sm">Direcciones</button>
+<button class="pb-4 text-neutral-400 hover:text-neutral-900 transition-colors font-medium whitespace-nowrap text-sm">Métodos de Pago</button>
+</div>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="bg-white border border-neutral-200 p-6 rounded-sm">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-h2 text-h2">Pedidos Recientes</h2>
+<span class="text-xs text-orange-600 font-bold cursor-pointer uppercase tracking-widest">Ver Todo</span>
+</div>
+<div class="space-y-4">
+<div class="group flex gap-4 items-center p-3 border border-neutral-100 hover:border-orange-200 transition-all cursor-pointer">
+<div class="w-16 h-16 bg-neutral-50 border border-neutral-100 flex-shrink-0">
+<img class="w-full h-full object-contain p-1" data-alt="A detailed studio photograph of a premium Japanese scale figure on a minimalist white platform. The lighting is crisp and cinematic, highlighting the intricate paintwork and sculpt details. The background is a soft neutral gray, creating a clean retail-focused image that emphasizes product exclusivity and high-end collectible quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg1S_uzPJlZZt1f9nNyioOR-LuV3YM7xzQqNl64Wj9PV3KpA3_0MrGo4LkSHm_soXZvIBNQYvxoiaCm78t1dUPEb-Mm6zAAqDHzPkrX3Pfr4diImsLtEJ3buSgzsXQhg-3e5ytHAMIQ4rg75bel5qIb27a11kCv6_ATya-KhQa6dEkw2wgNwqQ03ZS8lMt81O_4ThwuntyZK8ixSRBK9eUIadhj8pa3egFGtZxhjmZRbOeDycwZvDGq0JATevB8eCSlHrzbe-bq4An">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-neutral-900 truncate">Cyberpunk 2077: Lucy 1/7</p>
+<p class="text-xs text-neutral-500 mt-0.5">Pedido #MK-88219</p>
+<div class="mt-2 flex items-center justify-between">
+<span class="px-2 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-bold uppercase rounded-sm">Enviado</span>
+<span class="font-price text-sm text-on-background">S/. 425.00</span>
+</div>
+</div>
+</div>
+<div class="group flex gap-4 items-center p-3 border border-neutral-100 hover:border-orange-200 transition-all cursor-pointer">
+<div class="w-16 h-16 bg-neutral-50 border border-neutral-100 flex-shrink-0">
+<img class="w-full h-full object-contain p-1" data-alt="Close-up of a Nendoroid action figure head with vibrant expressive features, displayed in a clean Akihabara shop setting. The product is surrounded by soft white bokeh lights and professional studio lighting that makes the colors pop. The aesthetic is modern retail, focusing on the cute yet detailed craftsmanship of authentic Japanese toys." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhv015KNclF6ETqyLCbh-zKd9xseoux-pDnVftFf_QNKxyYDEloyFOFjzNzot8xqB6GT_UCCbKriwjPittBWwKY7qAIa9EhG2DiobuqaE84RlySMUWvVzrVPp4icvmxgRfNNTU3mWqOkJlwShfov_0k1NbCfgsZDUdawhnwV4aH98_BTvk_xygaytAp0dQpNSqA_uNONKvMBno1-j294pv2L0dn9vU7ZDYXg2vkdZ3yA5Aiye0x64q7I6xn2xbttxF3mKCAJQxv-3I">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-neutral-900 truncate">Hatsune Miku: Magical Mirai</p>
+<p class="text-xs text-neutral-500 mt-0.5">Pedido #MK-88104</p>
+<div class="mt-2 flex items-center justify-between">
+<span class="px-2 py-0.5 bg-green-50 text-green-700 text-[10px] font-bold uppercase rounded-sm">Procesando</span>
+<span class="font-price text-sm text-on-background">S/. 150.00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white border border-neutral-200 p-6 rounded-sm col-span-1 md:col-span-2">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-h2 text-h2">Rastreador de Preventas</h2>
+<div class="flex gap-2">
+<span class="w-2 h-2 rounded-full bg-orange-600 animate-pulse">Ver Todo</span>
+<span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">3 Preventas Activas</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm">
+<thead>
+<tr class="text-neutral-400 font-label-bold border-b border-neutral-100">
+<th class="pb-3 uppercase tracking-wider font-bold text-[10px]">Nombre del Producto</th>
+<th class="pb-3 uppercase tracking-wider font-bold text-[10px]">Fecha de Lanzamiento</th>
+<th class="pb-3 uppercase tracking-wider font-bold text-[10px]">Estado</th>
+<th class="pb-3 uppercase tracking-wider font-bold text-[10px]">Progreso</th>
+<th class="pb-3 text-right"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-neutral-50">
+<tr>
+<td class="py-4 font-bold text-neutral-900">Elden Ring: Malenia 1/4</td>
+<td class="py-4 text-neutral-500">Dec 2024</td>
+<td class="py-4">
+<span class="text-xs text-orange-600 font-bold bg-orange-50 px-2 py-1 rounded-sm">Producción</span>
+</td>
+<td class="py-4 w-48">
+<div class="w-full h-1 bg-neutral-100 rounded-full">
+<div class="bg-orange-600 h-full rounded-full" style="width: 75%"></div>
+</div>
+</td>
+<td class="py-4 text-right">
+<span class="material-symbols-outlined text-neutral-300 hover:text-orange-600 cursor-pointer" data-icon="chevron_right">chevron_right</span>
+</td>
+</tr>
+<tr>
+<td class="py-4 font-bold text-neutral-900">Spy x Family: Yor Forger</td>
+<td class="py-4 text-neutral-500">Oct 2024</td>
+<td class="py-4">
+<span class="text-xs text-blue-600 font-bold bg-blue-50 px-2 py-1 rounded-sm">Control de Calidad</span>
+</td>
+<td class="py-4 w-48">
+<div class="w-full h-1 bg-neutral-100 rounded-full">
+<div class="bg-blue-500 h-full rounded-full" style="width: 90%"></div>
+</div>
+</td>
+<td class="py-4 text-right">
+<span class="material-symbols-outlined text-neutral-300 hover:text-orange-600 cursor-pointer" data-icon="chevron_right">chevron_right</span>
+</td>
+</tr>
+<tr>
+<td class="py-4 font-bold text-neutral-900">Genshin: Raiden Shogun</td>
+<td class="py-4 text-neutral-500">Q1 2025</td>
+<td class="py-4">
+<span class="text-xs text-neutral-500 font-bold bg-neutral-50 px-2 py-1 rounded-sm">Preventa Abierta</span>
+</td>
+<td class="py-4 w-48">
+<div class="w-full h-1 bg-neutral-100 rounded-full">
+<div class="bg-neutral-300 h-full rounded-full" style="width: 25%"></div>
+</div>
+</td>
+<td class="py-4 text-right">
+<span class="material-symbols-outlined text-neutral-300 hover:text-orange-600 cursor-pointer" data-icon="chevron_right">chevron_right</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-low p-6 rounded-sm border border-outline-variant flex flex-col justify-between">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Beneficios de Miembro</p>
+<h3 class="font-h2 text-h2 mb-4 leading-tight">Lealtad de Coleccionista Nivel 4</h3>
+<p class="text-sm text-on-surface-variant">Estás a 250 puntos del Nivel 5: Curador Élite. Desbloquea un 15% de descuento fijo en envíos.</p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="text-lg font-black text-primary">1,750 PTS</span>
+<span class="material-symbols-outlined text-primary" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="bg-white border border-neutral-200 p-6 rounded-sm lg:col-span-3">
+<h3 class="font-h2 text-h2 mb-6">Security &amp; Account</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex items-center gap-4 p-4 border border-neutral-100 rounded-sm">
+<div class="w-10 h-10 bg-neutral-50 flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-neutral-400" data-icon="mail">mail</span>
+</div>
+<div class="flex-1">
+<p class="text-[10px] uppercase font-bold text-neutral-400 tracking-wider">Contraseña de la Cuenta</p>
+<p class="text-sm font-medium text-neutral-900">collector.kenji@tokyo.net</p>
+</div>
+<button class="text-xs text-orange-600 font-bold hover:underline">Edit</button>
+</div>
+<div class="flex items-center gap-4 p-4 border border-neutral-100 rounded-sm">
+<div class="w-10 h-10 bg-neutral-50 flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-neutral-400" data-icon="lock">lock</span>
+</div>
+<div class="flex-1">
+<p class="text-[10px] uppercase font-bold text-neutral-400 tracking-wider">Contraseña de la Cuenta</p>
+<p class="text-sm font-medium text-neutral-900">••••••••••••••</p>
+</div>
+<button class="text-xs text-orange-600 font-bold hover:underline">Update</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="bg-neutral-50 border-t border-neutral-200 mt-20">
+<div class="w-full max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1">
+<div class="text-xl font-black text-neutral-400 mb-6">MotnekiStore</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 leading-relaxed">© 2024 Motneki Store. Tokyo Akihabara. Todos los derechos reservados.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-xs uppercase tracking-widest text-neutral-900">Servicio al Cliente</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Información de Envío</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Devoluciones y Cambios</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Guía de Especificaciones Técnicas</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-xs uppercase tracking-widest text-neutral-900">Control de Calidad</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Garantía de Autenticidad</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Certificaciones del Fabricante</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Política de Cajas Dañadas</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-xs uppercase tracking-widest text-neutral-900">Conectar</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Soporte al Coleccionista</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Comunidad de Discord</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-neutral-500 hover:text-orange-600 transition-colors" href="#">Instagram Showcase</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>
